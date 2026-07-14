@@ -1,0 +1,81 @@
+INSTALL AND ACTIVATE GUIDE
+AI GOVERNANCE CHAIN™ on GitHub, step by step
+
+This guide takes you from this ZIP file to a live, public website with every free
+instrument downloadable. No technical background is required. Allow 30 to 45 minutes.
+
+WHAT IS IN THIS PACKAGE
+- The landing page (index.html) in English, French, Spanish, and Portuguese
+- The Free Library (free_library.html) with every free instrument in PDF and DOCX
+- The technical layer for engineers (the tech folder)
+- The storefront page (storefront.html) that describes the paid catalog
+- All repository files (README, license, trademark, citation, and the rest)
+IMPORTANT: this package contains ONLY free content. Your paid documents live in the
+separate PAID FULFILLMENT package and must NEVER be uploaded to GitHub.
+
+STEP 1. CREATE YOUR GITHUB ACCOUNT (skip if you have one)
+1. Go to github.com and select Sign up.
+2. Use your business email. Choose a professional username. Recommended: aigovernancechain.
+3. Verify your email address when GitHub asks.
+
+STEP 2. CREATE THE REPOSITORY (the home of your channel)
+1. When signed in, select the plus sign at the top right, then New repository.
+2. Repository name: aigovernancechain (lowercase, no spaces).
+3. Description (copy and paste exactly, 317 characters): AI governance framework: 40+ ready-to-use instruments for EU AI Act compliance, ISO/IEC 42001, NIST AI RMF, AI risk management, and AI ethics. Home of the AI-ERF™, the first operational AI emergency response standard. Free in EN, FR, ES, PT-BR. By Mathieu K. Gouanou, Member, Harvard Business Review Advisory Council.
+4. Select Public.
+5. Do NOT tick any of the initialize boxes (no README, no gitignore, no license).
+   This package already contains all of them.
+6. Select Create repository.
+
+STEP 3. UPLOAD THE CONTENT (no software needed)
+1. Unzip this package on your computer. You will see a folder named
+   AI_GOVERNANCE_CHAIN_public. Open it. The files inside it (index.html, README.md,
+   the folders free, i18n, tech, assets) are what you upload.
+2. On your new empty repository page, select the link that says
+   uploading an existing file.
+3. Drag the CONTENTS of the AI_GOVERNANCE_CHAIN_public folder into the browser
+   window. Important: drag the files and folders INSIDE it, not the folder itself,
+   so that index.html sits at the top level of the repository.
+4. In the commit message box, type: First publication of AI GOVERNANCE CHAIN™.
+5. Select Commit changes and wait for the upload to finish.
+   Note: if the browser upload struggles with the number of files, upload in two or
+   three batches (for example the root files first, then the free folder, then i18n
+   and tech). The result is the same.
+
+STEP 4. ACTIVATE THE WEBSITE (GitHub Pages)
+1. In the repository, select Settings (top menu), then Pages (left menu).
+2. Under Build and deployment, set Source to Deploy from a branch.
+3. Set Branch to main and the folder to / (root). Select Save.
+4. Wait two to five minutes. Refresh the page. GitHub shows your live address:
+   https://YOUR-USERNAME.github.io/aigovernancechain/
+5. Open that address. You should see the AI GOVERNANCE CHAIN™ landing page.
+
+STEP 5. VERIFY EVERYTHING WORKS (five minutes)
+1. On the landing page, check the language banner: English, Francais, Espanol, Portugues.
+2. Select Browse the Free Library and download one PDF and one DOCX.
+3. Open the technical layer from the engineer row of the Start here table.
+4. Open the storefront page and confirm the contact buttons open your email.
+5. Check the footer links to LinkedIn, X, YouTube, and GitHub.
+
+STEP 6. OPTIONAL BUT RECOMMENDED: YOUR OWN DOMAIN
+1. Buy the domain aigovernancechain.com at any registrar (about 10 to 15 USD per year).
+2. In your registrar's DNS settings, create four A records, each with host @ :
+   185.199.108.153   185.199.109.153   185.199.110.153   185.199.111.153
+3. Create one CNAME record: host www, value YOUR-USERNAME.github.io
+4. Back in GitHub: Settings, Pages, Custom domain. Enter aigovernancechain.com and Save.
+5. When the DNS check turns green (minutes to 24 hours), tick Enforce HTTPS.
+6. Your site now lives at https://aigovernancechain.com with a free security certificate.
+
+STEP 7. WHAT COMES NEXT
+1. Submit your live storefront address to Lemon Squeezy or Paddle to activate payments.
+2. Upload the PAID FULFILLMENT package to the payment platform only, never to GitHub.
+3. When your checkout links are live, have the Buy buttons wired to them.
+
+THE ONE RULE THAT PROTECTS YOUR REVENUE
+GitHub is public. Anything uploaded to it can be downloaded by anyone, free.
+Only ever upload THIS package. The paid documents stay behind the payment gate.
+
+AI GOVERNANCE CHAIN™
+© 2026 Mathieu K. Gouanou. All rights reserved.
+Member, Harvard Business Review Advisory Council.
+Document standard: human-first AI governance.

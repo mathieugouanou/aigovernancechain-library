@@ -1,0 +1,19 @@
+cff-version: 1.2.0
+    message: "If you use AI GOVERNANCE CHAIN™, please cite it as below."
+    title: "AI GOVERNANCE CHAIN™: A Human-First AI Governance Framework"
+    authors:
+      - family-names: Gouanou
+        given-names: Mathieu K.
+        affiliation: "Member, Harvard Business Review Advisory Council"
+    version: "2026.Q2"
+    date-released: 2026-06-30
+    url: "https://github.com/[your-handle]/ai-governance-chain"
+    preferred-citation:
+      type: report
+      title: "The State of AI Governance 2026: From Principle to Practice"
+      authors:
+        - family-names: Gouanou
+          given-names: Mathieu K.
+      year: 2026
+      notes: "Quarterly publication of AI GOVERNANCE CHAIN™"
+    
