@@ -1,0 +1,22 @@
+# Caso 10: Grupo financeiro multi-unidades (Grande empresa / Privado)
+    
+    Nota de estilo: sem travessões.
+    
+    ## Antes
+    A organização implantava IA sem uma estrutura de governança adaptada ao seu tamanho ou setor. Exposição a risco não medida, sem registro de decisoes auditável.
+    
+    ## Intervenção
+    Aplicação da cadeia AI GOVERNANCE CHAIN™, perfil dimensionado para este segmento: orientação, plano, implementação de controles e monitoramento com o AI Governance Health Score.
+    
+    ## Depois
+    Risco mapeado e reduzido, decisoes rastreáveis, conformidade documentada. Custo da inação evitado, estimado pelo modelo de ROI.
+    
+    ## Lição
+    Uma governança dimensionada, nem leve demais nem pesada demais, transforma exposição em vantagem operacional.
+    
+
+---
+AI GOVERNANCE CHAIN™
+Estrutura de governança de IA
+(c) 2026 Mathieu K. Gouanou. Todos os direitos reservados.
+Membro, Conselho Consultivo da Harvard Business Review.

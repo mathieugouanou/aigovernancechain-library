@@ -1,0 +1,53 @@
+# =====================================================================
+# The AI Use-Case Intake Form (canonical template)
+# AI GOVERNANCE CHAIN™ | (c) 2026 Mathieu K. Gouanou. All rights reserved.
+# Member, Harvard Business Review Advisory Council.
+# License: CC BY-NC-ND 4.0 | Commercial licensing: contact@aigovernancechain.com
+# Citation: Mathieu K. Gouanou (2026). The AI Use-Case Intake Form. AI GOVERNANCE CHAIN™.
+# Document standard: human-first AI governance.
+# =====================================================================
+# WHAT: the front door of governance. One file per AI system or use case,
+#       captured BEFORE it ships.
+# WHY: you cannot govern what you cannot see. The most common governance
+#      failure is a system reaching production that no one formally
+#      reviewed. This form makes "register it first" the default.
+# HOW TO USE: copy this file per use case into your governance repo,
+#      fill it in, and route by the initial_risk_tier at the bottom.
+# FREE covers the intake and the routing logic. The full intake-to-register
+# workflow, automated triage, and the central inventory live in the paid
+# AI Governance Operating System on the AI GOVERNANCE CHAIN™ storefront.
+
+system:
+  name: ""
+  business_owner: ""         # accountable person
+  technical_owner: ""
+  date_registered: ""        # ISO 8601
+
+purpose:
+  decision_or_task: ""       # what decision or task does it support
+  who_relies_on_output: ""
+
+sourcing:
+  build_or_buy: ""           # built_in_house | third_party
+  vendor: ""                 # if bought, name the vendor
+  vendor_screened: false     # AI Vendor Risk Quick-Screen completed
+
+data:
+  data_used: ""
+  personal_or_sensitive: false
+
+stakes:
+  can_affect_rights_safety_money_access: false
+  human_reviews_output_before_action: false
+
+initial_risk_tier: ""        # minimal | limited | high | unacceptable
+# Routing:
+#   minimal or limited -> log it and proceed
+#   high              -> full review before launch
+#   unacceptable      -> stop
+
+routing:
+  decision: ""               # proceed | review | stop
+  decided_by: ""
+  date: ""
+  notes: ""

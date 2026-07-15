@@ -1,0 +1,248 @@
+{
+  "name": "The AI Risk Taxonomy (AI GOVERNANCE CHAIN™)",
+  "version": "1.0.0",
+  "verified": "Q2 2026",
+  "author": "Mathieu K. Gouanou",
+  "credential": "Member, Harvard Business Review Advisory Council",
+  "publisher": "AI GOVERNANCE CHAIN™",
+  "license": "CC BY-NC-ND 4.0. Attribution required. No commercial use. No derivatives. Commercial licensing: contact@aigovernancechain.com",
+  "citation": "Mathieu K. Gouanou (2026). The AI Risk Taxonomy. AI GOVERNANCE CHAIN™.",
+  "description": "Thirty named AI risks organized into six mutually exclusive and collectively exhaustive (MECE) categories. Machine-readable edition of the free reference map.",
+  "usage": "For each risk ask three questions: Could this happen to us? Would we know if it did? Do we have an owner for it? A no, maybe, no answer marks a priority.",
+  "paid_depth": "Scoring, treatment planning, risk appetite, and monitoring live in the AI Risk Management Kit (paid). The full catalog: https://github.com/aigovernancechain",
+  "category_count": 6,
+  "risk_count": 30,
+  "categories": [
+    {
+      "id": "technical",
+      "number": 1,
+      "name": "Technical Risks",
+      "definition": "The system itself fails.",
+      "risks": [
+        {
+          "id": 1,
+          "slug": "model-error-inaccuracy",
+          "name": "Model error and inaccuracy",
+          "definition": "The system produces wrong outputs within its intended use."
+        },
+        {
+          "id": 2,
+          "slug": "model-drift",
+          "name": "Model drift",
+          "definition": "Performance degrades silently as the world changes around a static model."
+        },
+        {
+          "id": 3,
+          "slug": "robustness-failure",
+          "name": "Robustness failure",
+          "definition": "The system breaks on inputs outside its training distribution."
+        },
+        {
+          "id": 4,
+          "slug": "adversarial-manipulation",
+          "name": "Adversarial manipulation",
+          "definition": "A bad actor crafts inputs to force a harmful output."
+        },
+        {
+          "id": 5,
+          "slug": "hallucination-fabrication",
+          "name": "Hallucination and fabrication",
+          "definition": "The system invents facts, citations, or confident falsehoods."
+        }
+      ]
+    },
+    {
+      "id": "data",
+      "number": 2,
+      "name": "Data Risks",
+      "definition": "The inputs are flawed or mishandled.",
+      "risks": [
+        {
+          "id": 6,
+          "slug": "training-data-bias",
+          "name": "Training data bias",
+          "definition": "Skewed data teaches the model a skewed view of the world."
+        },
+        {
+          "id": 7,
+          "slug": "data-quality-failure",
+          "name": "Data quality failure",
+          "definition": "Incomplete, stale, or mislabeled data corrupts outputs."
+        },
+        {
+          "id": 8,
+          "slug": "privacy-violation",
+          "name": "Privacy violation",
+          "definition": "Personal data is used or exposed without basis or consent."
+        },
+        {
+          "id": 9,
+          "slug": "data-provenance-failure",
+          "name": "Data provenance failure",
+          "definition": "The origin and rights of training data cannot be established."
+        },
+        {
+          "id": 10,
+          "slug": "data-security-breach",
+          "name": "Data security breach",
+          "definition": "Training data or prompts are exfiltrated."
+        }
+      ]
+    },
+    {
+      "id": "ethical-societal",
+      "number": 3,
+      "name": "Ethical and Societal Risks",
+      "definition": "The system harms people or the public good.",
+      "risks": [
+        {
+          "id": 11,
+          "slug": "discrimination-unfair-outcomes",
+          "name": "Discrimination and unfair outcomes",
+          "definition": "The system treats groups inequitably."
+        },
+        {
+          "id": 12,
+          "slug": "sycophancy-truthfulness-failure",
+          "name": "Sycophancy and truthfulness failure",
+          "definition": "The system agrees, flatters, or tells people what they want to hear instead of what is true.",
+          "flagship": true,
+          "instrument": "The AI Sycophancy Risk Register™"
+        },
+        {
+          "id": 13,
+          "slug": "manipulation-dark-patterns",
+          "name": "Manipulation and dark patterns",
+          "definition": "The system nudges people against their interest."
+        },
+        {
+          "id": 14,
+          "slug": "erosion-human-autonomy",
+          "name": "Erosion of human autonomy",
+          "definition": "People defer to the system and stop deciding."
+        },
+        {
+          "id": 15,
+          "slug": "societal-labor-disruption",
+          "name": "Societal and labor disruption",
+          "definition": "Automation displaces work faster than institutions adapt."
+        }
+      ]
+    },
+    {
+      "id": "legal-regulatory",
+      "number": 4,
+      "name": "Legal and Regulatory Risks",
+      "definition": "The organization breaches its obligations.",
+      "risks": [
+        {
+          "id": 16,
+          "slug": "regulatory-non-compliance",
+          "name": "Regulatory non-compliance",
+          "definition": "The system violates the EU AI Act, sector rules, or local law."
+        },
+        {
+          "id": 17,
+          "slug": "liability-exposure",
+          "name": "Liability exposure",
+          "definition": "Harm caused by the system creates legal claims."
+        },
+        {
+          "id": 18,
+          "slug": "ip-infringement",
+          "name": "Intellectual property infringement",
+          "definition": "Training or outputs breach copyright or licensing."
+        },
+        {
+          "id": 19,
+          "slug": "contractual-disclosure-failure",
+          "name": "Contractual and disclosure failure",
+          "definition": "The organization misrepresents what its AI does."
+        },
+        {
+          "id": 20,
+          "slug": "cross-border-conflict",
+          "name": "Cross-border conflict",
+          "definition": "The system meets contradictory rules across jurisdictions."
+        }
+      ]
+    },
+    {
+      "id": "operational",
+      "number": 5,
+      "name": "Operational Risks",
+      "definition": "The organization cannot run or control the system.",
+      "risks": [
+        {
+          "id": 21,
+          "slug": "lack-human-oversight",
+          "name": "Lack of human oversight",
+          "definition": "No one can meaningfully intervene."
+        },
+        {
+          "id": 22,
+          "slug": "no-off-switch",
+          "name": "No off switch",
+          "definition": "The system cannot be stopped quickly and safely."
+        },
+        {
+          "id": 23,
+          "slug": "vendor-supply-chain-dependency",
+          "name": "Vendor and supply-chain dependency",
+          "definition": "A third-party model or service fails or changes."
+        },
+        {
+          "id": 24,
+          "slug": "monitoring-blind-spots",
+          "name": "Monitoring blind spots",
+          "definition": "Failures occur with no detection."
+        },
+        {
+          "id": 25,
+          "slug": "skills-capacity-gap",
+          "name": "Skills and capacity gap",
+          "definition": "The people running the system cannot govern it."
+        }
+      ]
+    },
+    {
+      "id": "strategic-existential",
+      "number": 6,
+      "name": "Strategic and Existential Risks",
+      "definition": "The system threatens the mission or beyond.",
+      "risks": [
+        {
+          "id": 26,
+          "slug": "reputational-damage",
+          "name": "Reputational damage",
+          "definition": "A public failure destroys trust faster than any control can rebuild it."
+        },
+        {
+          "id": 27,
+          "slug": "mission-misalignment",
+          "name": "Mission misalignment",
+          "definition": "The system optimizes for a goal that conflicts with the organization's purpose."
+        },
+        {
+          "id": 28,
+          "slug": "agentic-over-reach",
+          "name": "Agentic over-reach",
+          "definition": "An autonomous system takes consequential actions beyond intended scope."
+        },
+        {
+          "id": 29,
+          "slug": "concentration-lock-in",
+          "name": "Concentration and lock-in",
+          "definition": "Dependence on a single model or provider becomes irreversible."
+        },
+        {
+          "id": 30,
+          "slug": "frontier-emergent-risk",
+          "name": "Frontier and emergent risk",
+          "definition": "The most advanced systems behave in ways no one anticipated."
+        }
+      ]
+    }
+  ],
+  "document_standard": "human-first AI governance"
+}

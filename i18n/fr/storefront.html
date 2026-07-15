@@ -1,0 +1,749 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI GOVERNANCE CHAIN&trade; | La couche op&eacute;rationnelle de la gouvernance de l'IA</title>
+<meta name="description" content="Gouvernez l'IA que vous d&eacute;ployez avant qu'elle n'&eacute;choue en public. La couche op&eacute;rationnelle de la gouvernance de l'IA, par l'auteur de l'AI Governance Emergency Response Framework (AI-ERF)&trade;.">
+<link href="https://fonts.googleapis.com/css2?family=Bakbak+One&family=Cairo:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --green:#48994E; --deep:#2F6B34; --darker:#234F27;
+    --lime:#BDE051; --paper:#F1F4E4; --ink:#1E2A1F; --soft:#E7F0E0;
+  }
+  *{margin:0;padding:0;box-sizing:border-box;}
+  body{font-family:'Cairo',sans-serif;color:var(--ink);background:var(--paper);line-height:1.65;}
+  h1,h2,h3{font-family:'Bakbak One',sans-serif;font-weight:400;letter-spacing:.3px;}
+  .wrap{max-width:1080px;margin:0 auto;padding:0 24px;}
+
+  /* ============ HERO : SCR narrative + authority stack ============ */
+  .hero{background:linear-gradient(160deg,var(--darker) 0%,var(--green) 100%);color:var(--paper);padding:72px 0 64px;}
+  .kicker{display:inline-block;background:var(--lime);color:var(--darker);font-family:'Bakbak One',sans-serif;font-size:14px;letter-spacing:2px;text-transform:uppercase;padding:6px 16px;border-radius:4px;margin-bottom:26px;}
+  .hero h1{font-size:44px;line-height:1.18;max-width:820px;margin-bottom:22px;color:#FFFFFF;}
+  .hero h1 .lime{color:var(--lime);}
+  .scr{max-width:800px;font-size:19px;}
+  .scr p{margin-bottom:14px;}
+  .scr strong{color:var(--lime);font-weight:700;}
+  .authority{margin-top:34px;border-left:5px solid var(--lime);padding:14px 20px;background:rgba(0,0,0,.18);border-radius:0 8px 8px 0;max-width:800px;}
+  .authority p{font-size:16.5px;}
+    .authority p.authority-detail{font-size:0.92em;opacity:0.92;margin-top:8px;}
+  .authority .name{font-family:'Bakbak One',sans-serif;font-size:19px;color:var(--lime);letter-spacing:.5px;}
+  .cta-row{margin-top:38px;display:flex;gap:16px;flex-wrap:wrap;align-items:center;}
+  .btn-primary{display:inline-block;background:var(--lime);color:var(--darker);font-family:'Bakbak One',sans-serif;font-size:18px;letter-spacing:1px;padding:16px 34px;border-radius:8px;text-decoration:none;box-shadow:0 6px 18px rgba(0,0,0,.25);}
+  .btn-ghost{display:inline-block;color:var(--paper);font-family:'Cairo',sans-serif;font-weight:700;font-size:16px;text-decoration:underline;text-underline-offset:4px;}
+  .why-now{margin-top:30px;max-width:800px;background:rgba(189,224,81,.12);border:1px solid rgba(189,224,81,.45);border-radius:8px;padding:14px 20px;font-size:15.5px;}
+  .why-now strong{color:var(--lime);}
+
+  /* ============ Section shells ============ */
+  section{padding:64px 0;}
+  .section-kicker{font-family:'Bakbak One',sans-serif;color:var(--green);letter-spacing:2px;text-transform:uppercase;font-size:14px;margin-bottom:10px;}
+  .section-title{font-size:32px;color:var(--darker);margin-bottom:10px;}
+  .section-sub{max-width:760px;font-size:17px;margin-bottom:36px;}
+
+  /* ============ Router 1 : size & sector (MECE 5x2) ============ */
+  .doors{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:20px;}
+  .door{background:#FFFFFF;border:1px solid #D8E4CF;border-top:6px solid var(--green);border-radius:10px;padding:26px 24px;display:flex;flex-direction:column;}
+  .door h3{font-size:20px;color:var(--darker);margin-bottom:6px;}
+  .door .band{font-family:'Bakbak One',sans-serif;font-size:13px;color:var(--green);letter-spacing:1.5px;text-transform:uppercase;margin-bottom:12px;}
+  .door p{font-size:15.5px;margin-bottom:12px;}
+  .door .fit{background:var(--soft);border-radius:6px;padding:10px 14px;font-size:14.5px;margin-bottom:14px;}
+  .door .fit strong{color:var(--deep);}
+  .door a{margin-top:auto;font-weight:700;color:var(--deep);text-decoration:none;font-size:15.5px;}
+  .door a:hover{text-decoration:underline;}
+  .door.public{border-top-color:var(--lime);background:linear-gradient(180deg,#FDFFF4 0%,#FFFFFF 60%);}
+
+  /* ============ Router 2 : roles ============ */
+  .roles{background:var(--darker);color:var(--paper);}
+  .roles .section-kicker{color:var(--lime);}
+  .roles .section-title{color:#FFFFFF;}
+  .role-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:20px;}
+  .role{background:rgba(255,255,255,.06);border:1px solid rgba(189,224,81,.35);border-radius:10px;padding:24px;}
+  .role h3{color:var(--lime);font-size:19px;margin-bottom:8px;}
+  .role .job{font-style:normal;font-weight:700;font-size:15.5px;margin-bottom:10px;color:#FFFFFF;}
+  .role p{font-size:15px;margin-bottom:10px;}
+  .role .route{font-size:14.5px;background:rgba(189,224,81,.14);border-radius:6px;padding:9px 13px;}
+  .role .route strong{color:var(--lime);}
+
+  .mece-note{margin-top:34px;background:rgba(255,255,255,.07);border-left:5px solid var(--lime);padding:16px 20px;border-radius:0 8px 8px 0;font-size:15.5px;max-width:860px;}
+  .mece-note strong{color:var(--lime);}
+
+  /* ============ Footer strip ============ */
+  footer{background:var(--darker);color:var(--paper);padding:34px 0;border-top:1px solid rgba(189,224,81,.4);}
+  footer .wrap{display:flex;flex-wrap:wrap;gap:14px;justify-content:space-between;align-items:center;}
+  footer p{font-size:14px;}
+  footer .std{color:var(--lime);font-weight:700;}
+.pricing-note{font-family:Cairo,sans-serif;color:#2e6b33;font-size:0.95em;border-left:4px solid #BDE051;padding-left:12px;margin:18px 0;}
+
+/* Options table + close sequence */
+.options-table { width:100%; border-collapse:collapse; margin:28px 0 18px 0; font-family:'Cairo',sans-serif; }
+.options-table th { background:#48994E; color:#FFFFFF; font-family:'Bakbak One',sans-serif; font-weight:400; letter-spacing:0.02em; padding:12px 14px; text-align:left; font-size:1.02em; }
+.options-table td { border:1px solid #BDE051; padding:12px 14px; vertical-align:top; font-size:0.98em; line-height:1.55; }
+.options-table tbody tr:nth-child(odd) td { background:#F3F8EF; }
+.options-table td.highlight-cell { background:#E8F4E0; border:2px solid #48994E; }
+.options-note { font-size:1.02em; line-height:1.6; color:#2F5D33; font-weight:600; margin-top:10px; }
+.close-sequence { background:#F7FAF3; }
+.close-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(260px,1fr)); gap:22px; margin:26px 0; }
+.close-block { background:#FFFFFF; border:1px solid #BDE051; border-radius:10px; padding:20px 22px; }
+.close-head { font-family:'Bakbak One',sans-serif; color:#48994E; font-size:1.15em; margin:0 0 10px 0; }
+.final-cta { text-align:center; margin-top:34px; padding:30px 24px; background:#48994E; border-radius:12px; color:#F1F4E4; }
+.final-cta-title { font-family:'Bakbak One',sans-serif; color:#FFFFFF; font-size:1.5em; margin:0 0 12px 0; }
+.final-cta p { color:#F1F4E4; }
+.cta-row { margin:20px 0 8px 0; }
+.btn { display:inline-block; padding:13px 26px; border-radius:8px; font-family:'Bakbak One',sans-serif; text-decoration:none; margin:6px 10px; font-size:1.02em; }
+.btn-primary { background:#BDE051; color:#2F5D33; }
+.btn-secondary { background:transparent; color:#F1F4E4; border:2px solid #BDE051; }
+.cta-under { font-size:0.92em; opacity:0.92; margin-top:12px; }
+
+.langbar{background:#1e3d21;padding:9px 0;text-align:center;font-size:.85rem}
+.langbar a{color:#F1F4E4;text-decoration:none;margin:0 10px;opacity:.85}
+.langbar a:hover{opacity:1;text-decoration:underline}
+.langbar a.active{color:#BDE051;font-weight:700;opacity:1}
+</style>
+</head>
+<body>
+
+<nav class="langbar">
+  <a href="../../storefront.html">English</a>
+  <a href="storefront.html" class="active">Fran&ccedil;ais</a>
+  <a href="../es/storefront.html">Espa&ntilde;ol (LATAM)</a>
+  <a href="../pt-br/storefront.html">Portugu&ecirc;s (BR)</a>
+</nav>
+
+<!-- ================= HERO ================= -->
+<header class="hero">
+  <div class="wrap">
+    <span class="kicker">AI GOVERNANCE CHAIN&trade;</span>
+    <h1>Votre organisation d&eacute;ploie l'IA plus vite qu'elle ne peut la gouverner. <span class="lime">L'&eacute;chec sera public. La preuve, elle, n'a pas &agrave; manquer.</span></h1>
+    <div class="scr">
+      <p><strong>La situation.</strong> L'IA r&eacute;dige d&eacute;sormais vos r&eacute;ponses, note vos clients et agit en votre nom. Chaque d&eacute;ploiement est une d&eacute;cision prise &agrave; la vitesse de la machine, sous votre responsabilit&eacute;.</p>
+      <p><strong>La complication.</strong> Les r&eacute;gulateurs, les conseils d'administration et les clients n'acceptent plus les intentions. Le r&egrave;glement europ&eacute;en sur l'intelligence artificielle (r&egrave;glement (UE) 2024/1689) pr&eacute;voit des amendes administratives pouvant atteindre 35 millions d'euros ou 7 pour cent du chiffre d'affaires annuel mondial pour les pratiques interdites, et un syst&egrave;me non gouvern&eacute; n'&eacute;choue pas en silence. Il &eacute;choue devant tout le monde.</p>
+      <p><strong>La r&eacute;solution.</strong> Voici la couche op&eacute;rationnelle de la gouvernance de l'IA : des instruments de travail, des cadres de r&eacute;ponse et des programmes r&eacute;currents qui vous permettent de gouverner ce que vous d&eacute;ployez et de le prouver &agrave; ceux qui le demandent.</p>
+    </div>
+    <div class="authority">
+      <p class="name">Mathieu K. Gouanou</p>
+      <p>Des d&eacute;cennies d'exp&eacute;rience professionnelle comme strat&egrave;ge, analyste d'affaires et architecte de l'IA, avec une ma&icirc;trise prouv&eacute;e de la r&eacute;ing&eacute;nierie des processus d'affaires (BPR) et de la transformation num&eacute;rique, d&eacute;velopp&eacute;e au fil de nombreux programmes et projets strat&eacute;giques. Membre du conseil consultatif de la Harvard Business Review. Auteur de l'AI Governance Emergency Response Framework (AI-ERF)&trade;, la premi&egrave;re norme op&eacute;rationnelle de r&eacute;ponse d'urgence pour la gouvernance de l'IA. Cr&eacute;ateur de l'AI Sycophancy Risk Register&trade;, l'instrument qui gouverne la d&eacute;faillance que personne d'autre ne nomme : une intelligence artificielle qui est d'accord avec vous au lieu de vous dire la v&eacute;rit&eacute;. Architecte de l'AI Governance Health Score&trade;, la mesure r&eacute;ex&eacute;cutable qui garde la gouvernance vivante apr&egrave;s la fin du projet, et fondateur de The Governance Circle, l'adh&eacute;sion o&ugrave; les praticiens maintiennent leur gouvernance &agrave; jour.</p>
+      <p class="authority-detail">Cr&eacute;ateur du corpus AI GOVERNANCE CHAIN&trade; : plus de quarante instruments de gouvernance op&eacute;rationnels couvrant sept piliers strat&eacute;giques (&eacute;thique, risque, strat&eacute;gie, assurance, culture, droits humains et IA de fronti&egrave;re), une taxonomie de trente risques d'IA nomm&eacute;s, un mod&egrave;le op&eacute;rationnel adapt&eacute; &agrave; la taille qui sert chaque organisation, de l'&eacute;quipe de trois personnes au minist&egrave;re national, et la publication trimestrielle State of AI Governance. Construit sur les disciplines qui gouvernent le march&eacute; : le r&egrave;glement europ&eacute;en sur l'intelligence artificielle, ISO/IEC 42001 et le NIST AI Risk Management Framework.</p>
+    </div>
+    <div class="cta-row">
+      <a class="btn-primary" href="#fit">Trouvez votre porte en 30 secondes</a>
+      <a class="btn-ghost" href="#seat">Ou partez de votre r&ocirc;le</a>
+    </div>
+    <div class="why-now">
+      <strong>Pourquoi maintenant :</strong> les obligations du r&egrave;glement europ&eacute;en sur l'intelligence artificielle entrent en vigueur &agrave; des dates publi&eacute;es, et la certification ISO/IEC 42001, la premi&egrave;re norme certifiable de syst&egrave;me de management de l'IA (publi&eacute;e en d&eacute;cembre 2023), prend des trimestres, pas des jours. Chaque mois d'attente est une exposition que vous choisissez.
+    </div>
+  </div>
+</header>
+
+<!-- ================= ROUTEUR 1 : TAILLE ET SECTEUR ================= -->
+<section id="fit">
+  <div class="wrap">
+    <p class="section-kicker">Routeur 1 sur 2 : capacit&eacute; et secteur</p>
+    <h2 class="section-title">Trouvez votre porte. Chaque organisation au monde entre par exactement une porte.</h2>
+    <p class="section-sub">Les obligations de gouvernance sont les m&ecirc;mes pour tous. La capacit&eacute; de les remplir ne l'est pas. Choisissez la porte qui correspond &agrave; votre organisation : la profondeur, la s&eacute;quence et la fourchette de prix s'ajustent &agrave; vous, et non l'inverse.</p>
+    <div class="doors">
+      <div class="door">
+        <h3>Nous sommes une petite &eacute;quipe</h3>
+        <p class="band">Micro et petite : 3 &agrave; 50 personnes : secteur priv&eacute;</p>
+        <p>Aucun r&ocirc;le de gouvernance d&eacute;di&eacute;, aucune marge. Il vous faut les versions r&eacute;alisables en une apr&egrave;s-midi, qui tiennent quand un client ou un investisseur pose la question difficile.</p>
+        <p class="fit"><strong>Votre parcours :</strong> les kits de niveau d&eacute;marrage et le Governance Vault &agrave; la bande Micro et Petite. Adapt&eacute;s &agrave; votre taille, jamais dilu&eacute;s.</p>
+        <a href="mailto:contact@aigovernancechain.com?subject=Demande%20de%20guidance%20adapt%C3%A9e%20%3A%20porte%20petite%20%C3%A9quipe">Entrer par la porte petite &eacute;quipe &rarr;</a>
+      </div>
+      <div class="door">
+        <h3>Nous sommes une organisation en croissance</h3>
+        <p class="band">Interm&eacute;diaire : 51 &agrave; 250 personnes : secteur priv&eacute;</p>
+        <p>Votre premi&egrave;re recrue d&eacute;di&eacute;e au risque ou &agrave; la conformit&eacute; est d&eacute;bord&eacute;e. Il vous faut un syst&egrave;me d'exploitation reproductible, pas un &eacute;ni&egrave;me PDF de politique.</p>
+        <p class="fit"><strong>Votre parcours :</strong> les sept kits piliers, les Done-With-You Sprints et le Vault &agrave; la bande interm&eacute;diaire.</p>
+        <a href="mailto:contact@aigovernancechain.com?subject=Demande%20de%20guidance%20adapt%C3%A9e%20%3A%20porte%20interm%C3%A9diaire">Entrer par la porte interm&eacute;diaire &rarr;</a>
+      </div>
+      <div class="door">
+        <h3>Nous sommes une grande organisation</h3>
+        <p class="band">Grande : 251 &agrave; 5 000 personnes : secteur priv&eacute;</p>
+        <p>Plusieurs unit&eacute;s, plusieurs syst&egrave;mes d'IA, une seule r&eacute;putation. La coordination est d&eacute;sormais le risque. Il vous faut des normes transversales et des preuves qui remontent.</p>
+        <p class="fit"><strong>Votre parcours :</strong> les Flagship Packs, le Vault &agrave; la grande bande et le Pre-Scale Governance Audit.</p>
+        <a href="mailto:contact@aigovernancechain.com?subject=Demande%20de%20guidance%20adapt%C3%A9e%20%3A%20porte%20grande%20organisation">Entrer par la porte grande organisation &rarr;</a>
+      </div>
+      <div class="door">
+        <h3>Nous sommes une entreprise de tr&egrave;s grande taille</h3>
+        <p class="band">Entreprise : 5 000 personnes et plus : secteur priv&eacute;</p>
+        <p>Surveillance du conseil, r&eacute;gulateurs dans plusieurs juridictions, &eacute;quipes f&eacute;d&eacute;r&eacute;es. Ici, la gouvernance est un mod&egrave;le op&eacute;rationnel, pas un classeur.</p>
+        <p class="fit"><strong>Votre parcours :</strong> l'Enterprise Governance Transformation Program et le Founder's Governance Partnership.</p>
+        <a href="mailto:contact@aigovernancechain.com?subject=Demande%20de%20guidance%20adapt%C3%A9e%20%3A%20porte%20entreprise">Entrer par la porte entreprise &rarr;</a>
+      </div>
+      <div class="door public">
+        <h3>Nous sommes le secteur public</h3>
+        <p class="band">Toute taille : agences, minist&egrave;res, municipalit&eacute;s</p>
+        <p>Devoir statutaire, confiance des citoyens, r&egrave;gles de passation des march&eacute;s et exigences de transparence. Votre gouvernance doit survivre &agrave; un audit et &agrave; un titre de presse.</p>
+        <p class="fit"><strong>Votre parcours :</strong> les &eacute;ditions secteur public avec un langage pr&ecirc;t pour la passation des march&eacute;s, l'Audit-Ready Evidence Vault et les playbooks d'impact citoyen.</p>
+        <a href="mailto:contact@aigovernancechain.com?subject=Demande%20de%20guidance%20adapt%C3%A9e%20%3A%20porte%20secteur%20public">Entrer par la porte secteur public &rarr;</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= ROUTEUR 2 : R&Ocirc;LES ================= -->
+<section id="seat" class="roles">
+  <div class="wrap">
+    <p class="section-kicker">Routeur 2 sur 2 : votre si&egrave;ge</p>
+    <h2 class="section-title">Quel est votre si&egrave;ge ? Achetez pour la question &agrave; laquelle vous devez personnellement r&eacute;pondre.</h2>
+    <p class="section-sub" style="color:#E9F1DF;">Un membre du conseil et un ing&eacute;nieur n'ach&egrave;tent pas la gouvernance pour la m&ecirc;me raison. Chaque si&egrave;ge ci-dessous s'ouvre sur la mission dont vous r&eacute;pondez, et vous oriente vers l'instrument con&ccedil;u pour elle.</p>
+    <div class="role-grid">
+      <div class="role">
+        <h3>Membre du conseil d'administration</h3>
+        <p class="job">Votre mission : poser les questions qui prot&egrave;gent l'organisation, et prouver que la surveillance a eu lieu.</p>
+        <p>Si l'IA &eacute;choue publiquement, les proc&egrave;s-verbaux montreront ce que vous avez demand&eacute;. Ou ce que vous n'avez pas demand&eacute;.</p>
+        <p class="route"><strong>Commencez ici :</strong> le Board and Executive Governance Pack, puis l'Intelligence Subscription.</p>
+      </div>
+      <div class="role">
+        <h3>Directeur g&eacute;n&eacute;ral</h3>
+        <p class="job">Votre mission : faire passer l'IA &agrave; l'&eacute;chelle sans faire passer &agrave; l'&eacute;chelle un risque non &eacute;valu&eacute;.</p>
+        <p>Une croissance b&acirc;tie sur une IA non gouvern&eacute;e est une croissance emprunt&eacute;e. La facture arrive plus tard, avec int&eacute;r&ecirc;ts, en public.</p>
+        <p class="route"><strong>Commencez ici :</strong> le parcours Gouvernez avant de passer &agrave; l'&eacute;chelle et le Pre-Scale Governance Audit.</p>
+      </div>
+      <div class="role">
+        <h3>Directeur de l'IA / responsable de la gouvernance</h3>
+        <p class="job">Votre mission : construire le syst&egrave;me d'exploitation, puis prouver chaque trimestre qu'il fonctionne.</p>
+        <p>Vous portez toute la cha&icirc;ne : inventaire, contr&ocirc;les, r&eacute;ponse, preuves. Il vous la faut comme un syst&egrave;me, pas comme des documents &eacute;parpill&eacute;s.</p>
+        <p class="route"><strong>Commencez ici :</strong> le Governance Vault (acc&egrave;s complet), puis le Certified Practitioner Program.</p>
+      </div>
+      <div class="role">
+        <h3>Responsable de la conformit&eacute;</h3>
+        <p class="job">Votre mission : survivre &agrave; la lettre du r&eacute;gulateur avec des documents, pas des explications.</p>
+        <p>Le r&egrave;glement europ&eacute;en sur l'intelligence artificielle et ISO/IEC 42001 ne demandent pas ce que vous pensez de la gouvernance. Ils demandent des preuves.</p>
+        <p class="route"><strong>Commencez ici :</strong> l'EU AI Act Compliance Pack, l'ISO/IEC 42001 Certification Toolkit, l'Audit-Ready Evidence Vault.</p>
+      </div>
+      <div class="role">
+        <h3>Ing&eacute;nieur / architecte de l'IA</h3>
+        <p class="job">Votre mission : livrer la fonctionnalit&eacute; d'IA sans livrer l'incident.</p>
+        <p>Les garde-fous appartiennent &agrave; l'architecture, pas &agrave; une diapositive. Surtout pour les syst&egrave;mes agentiques qui agissent seuls.</p>
+        <p class="route"><strong>Commencez ici :</strong> l'AI Risk Management Kit, le Frontier and AGI Governance Kit, les Interactive Governance Tools.</p>
+      </div>
+      <div class="role">
+        <h3>Responsable des achats</h3>
+        <p class="job">Votre mission : gouverner l'IA que vous achetez, car l'essentiel de votre IA est achet&eacute;, pas construit.</p>
+        <p>Le mod&egrave;le du fournisseur devient votre incident le jour o&ugrave; vous signez. Le contrat est votre premier contr&ocirc;le.</p>
+        <p class="route"><strong>Commencez ici :</strong> la ligne Third-Party AI Risk et la biblioth&egrave;que de clauses de passation des march&eacute;s.</p>
+      </div>
+    </div>
+    <div class="mece-note">
+      <strong>Comment les deux routeurs fonctionnent ensemble :</strong> votre porte fixe la profondeur et la fourchette de prix. Votre si&egrave;ge fixe le cadrage et le premier produit. Une dimension ne remplace jamais l'autre : un responsable de la conformit&eacute; dans une organisation interm&eacute;diaire obtient les instruments de conformit&eacute; &agrave; la bande interm&eacute;diaire. Rien ne se chevauche. Personne n'est laiss&eacute; de c&ocirc;t&eacute;.
+    </div>
+  </div>
+</section>
+
+<!-- ================= FLAGSHIP ================= -->
+<section id="flagship" style="max-width:1080px;margin:0 auto;padding:56px 24px;">
+  <div style="font-family:'Bakbak One',sans-serif;font-size:34px;color:#48994E;line-height:1.2;">Une gouvernance que vous pouvez prouver, quand les enjeux sont au plus haut</div>
+  <p style="font-family:'Cairo',sans-serif;font-size:17px;color:#2b3a2c;max-width:820px;margin-top:14px;">Les Flagship Packs existent pour les moments o&ugrave; une intention ne suffit plus : le r&eacute;gulateur demande des documents, le certificateur demande des preuves, le conseil demande des r&eacute;ponses, et un syst&egrave;me en production demande une r&eacute;action. Chaque pack commence l&agrave; o&ugrave; la couche gratuite s'arr&ecirc;te. Chaque pack co&ucirc;te une fraction d'une seule mission de pr&eacute;paration, et moins que les deux premiers jours d'un consultant senior.</p>
+
+  <!-- Pack 1: AI-ERF Implementation Pack -->
+  <div style="background:#F1F4E4;border:1px solid #BDE051;border-radius:14px;padding:28px;margin-top:28px;">
+    <div style="font-family:'Bakbak One',sans-serif;font-size:22px;color:#48994E;">R&eacute;pondez &agrave; une d&eacute;faillance de l'IA en heures, pas en semaines</div>
+    <p style="font-family:'Cairo',sans-serif;font-size:16px;color:#2b3a2c;margin-top:10px;"><span style="color:#48994E;font-weight:700;">La mission :</span> quand un syst&egrave;me d'IA &eacute;choue en production, menez une r&eacute;ponse que votre conseil et votre r&eacute;gulateur respecteront. L'AI Governance Emergency Response Framework (AI-ERF)&trade; Implementation Pack est la bo&icirc;te &agrave; outils op&eacute;rationnelle du cadre : le journal des incidents &agrave; remplir, la feuille de gradation de la s&eacute;v&eacute;rit&eacute;, les cartes de r&ocirc;le imprimables, le kit d'exercices et de simulations, et les mod&egrave;les de rapport au conseil.</p>
+    <p style="font-family:'Cairo',sans-serif;font-size:15px;color:#2b3a2c;margin-top:8px;"><span style="color:#48994E;font-weight:700;">L&agrave; o&ugrave; la couche gratuite s'arr&ecirc;te :</span> le cadre gratuit vous dit &agrave; quoi ressemble une r&eacute;ponse. Le pack est la r&eacute;ponse, pr&ecirc;te &agrave; ex&eacute;cuter.</p>
+    <p style="font-family:'Cairo',sans-serif;font-size:15px;color:#2b3a2c;margin-top:8px;"><span style="color:#48994E;font-weight:700;">Le co&ucirc;t de l'attente :</span> la premi&egrave;re heure d'un incident d'IA d&eacute;cide de l'issue, et une premi&egrave;re heure improvis&eacute;e d&eacute;truit les preuves, retarde le confinement et transforme un &eacute;v&eacute;nement ma&icirc;tris&eacute; en &eacute;v&eacute;nement public. Chaque cas de notre biblioth&egrave;que o&ugrave; la r&eacute;ponse a &eacute;t&eacute; improvis&eacute;e a co&ucirc;t&eacute; plus cher que la r&eacute;ponse qui avait &eacute;t&eacute; r&eacute;p&eacute;t&eacute;e.</p>
+    <p style="font-family:'Cairo',sans-serif;font-size:15px;color:#2b3a2c;margin-top:8px;"><span style="color:#48994E;font-weight:700;">Extrait de la biblioth&egrave;que de cas :</span> un r&eacute;seau hospitalier dot&eacute; d'une autorit&eacute; d'arr&ecirc;t r&eacute;p&eacute;t&eacute;e a confin&eacute; un mod&egrave;le de triage d&eacute;faillant en neuf minutes. Une agence o&ugrave; tout le monde &eacute;tait le commandant a mis deux jours.</p>
+    <div style="margin-top:14px;font-family:'Bakbak One',sans-serif;font-size:20px;color:#48994E;">4,900 USD <span style="font-family:'Cairo',sans-serif;font-size:14px;color:#2b3a2c;font-weight:400;">, licence pour une seule organisation. Moins d'une journ&eacute;e de consultant.</span></div>
+    <a href="mailto:contact@aigovernancechain.com?subject=Demande%20d%27achat%20%3A%20AI-ERF%20Implementation%20Pack" style="display:inline-block;margin-top:12px;background:#48994E;color:#2b3a2c;font-family:'Bakbak One',sans-serif;font-size:16px;padding:10px 26px;border-radius:8px;text-decoration:none;">Obtenir l'Implementation Pack</a>
+  </div>
+
+  <!-- Pack 2: EU AI Act Compliance Pack -->
+  <div style="background:#F1F4E4;border:1px solid #BDE051;border-radius:14px;padding:28px;margin-top:20px;">
+    <div style="font-family:'Bakbak One',sans-serif;font-size:22px;color:#48994E;">Survivez &agrave; la lettre du r&eacute;gulateur avec des documents, pas des explications</div>
+    <p style="font-family:'Cairo',sans-serif;font-size:16px;color:#2b3a2c;margin-top:10px;"><span style="color:#48994E;font-weight:700;">La mission :</span> classer chaque syst&egrave;me d'IA au titre du r&egrave;glement europ&eacute;en sur l'intelligence artificielle (r&egrave;glement (UE) 2024/1689), documenter les travaux de conformit&eacute; des syst&egrave;mes &agrave; haut risque et remplir les obligations de transparence, avec des mod&egrave;les plut&ocirc;t que des suppositions. Le pack couvre le classificateur de niveaux de risque, la liste des obligations &agrave; haut risque, les mentions de transparence et le dossier de documentation technique.</p>
+    <p style="font-family:'Cairo',sans-serif;font-size:15px;color:#2b3a2c;margin-top:8px;"><span style="color:#48994E;font-weight:700;">L&agrave; o&ugrave; la couche gratuite s'arr&ecirc;te :</span> la carte gratuite La r&eacute;glementation en un coup d'&oelig;il vous dit dans quel niveau vous &ecirc;tes. Le pack produit les preuves que ce niveau exige.</p>
+    <p style="font-family:'Cairo',sans-serif;font-size:15px;color:#2b3a2c;margin-top:8px;"><span style="color:#48994E;font-weight:700;">Le co&ucirc;t de l'attente :</span> le r&egrave;glement pr&eacute;voit des amendes administratives pouvant atteindre 35 millions d'euros ou 7 pour cent du chiffre d'affaires annuel mondial pour les pratiques interdites, et jusqu'&agrave; 15 millions d'euros ou 3 pour cent pour les autres infractions. Les obligations entrent en vigueur &agrave; des dates publi&eacute;es. Attendre ne suspend pas le calendrier.</p>
+    <p style="font-family:'Cairo',sans-serif;font-size:15px;color:#2b3a2c;margin-top:8px;"><span style="color:#48994E;font-weight:700;">Extrait de la biblioth&egrave;que de cas :</span> une petite agence publique a achev&eacute; sa classification compl&egrave;te en une apr&egrave;s-midi avec la logique des niveaux en main. Le devis alternatif d'un cabinet externe se mesurait en semaines.</p>
+    <div style="margin-top:14px;font-family:'Bakbak One',sans-serif;font-size:20px;color:#48994E;">4,200 USD <span style="font-family:'Cairo',sans-serif;font-size:14px;color:#2b3a2c;font-weight:400;">, licence pour une seule organisation. Une fraction d'une seule consultation juridique.</span></div>
+    <a href="mailto:contact@aigovernancechain.com?subject=Demande%20d%27achat%20%3A%20EU%20AI%20Act%20Compliance%20Pack" style="display:inline-block;margin-top:12px;background:#48994E;color:#2b3a2c;font-family:'Bakbak One',sans-serif;font-size:16px;padding:10px 26px;border-radius:8px;text-decoration:none;">Obtenir le Compliance Pack</a>
+  </div>
+
+  <!-- Pack 3: ISO 42001 Certification Toolkit -->
+  <div style="background:#F1F4E4;border:1px solid #BDE051;border-radius:14px;padding:28px;margin-top:20px;">
+    <div style="font-family:'Bakbak One',sans-serif;font-size:22px;color:#48994E;">Entrez en certification avec les documents d&eacute;j&agrave; r&eacute;dig&eacute;s</div>
+    <p style="font-family:'Cairo',sans-serif;font-size:16px;color:#2b3a2c;margin-top:10px;"><span style="color:#48994E;font-weight:700;">La mission :</span> mettre en place un syst&egrave;me de management de l'IA certifiable selon ISO/IEC 42001, la premi&egrave;re norme certifiable de syst&egrave;me de management de l'IA, publi&eacute;e en d&eacute;cembre 2023, sans r&eacute;diger chaque politique &agrave; partir d'une page blanche. Le toolkit contient le pack de politiques, le guide de mise en &oelig;uvre des contr&ocirc;les, le kit d'audit interne et les mod&egrave;les de revue de direction.</p>
+    <p style="font-family:'Cairo',sans-serif;font-size:15px;color:#2b3a2c;margin-top:8px;"><span style="color:#48994E;font-weight:700;">L&agrave; o&ugrave; la couche gratuite s'arr&ecirc;te :</span> la liste de pr&eacute;paration gratuite mesure o&ugrave; vous en &ecirc;tes. Le toolkit comble les &eacute;carts que le score r&eacute;v&egrave;le.</p>
+    <p style="font-family:'Cairo',sans-serif;font-size:15px;color:#2b3a2c;margin-top:8px;"><span style="color:#48994E;font-weight:700;">Le co&ucirc;t de l'attente :</span> les cycles de certification se comptent en trimestres, et les grands clients demandent de plus en plus le certificat dans les appels d'offres. Chaque trimestre sans syst&egrave;me de management op&eacute;rationnel est un trimestre o&ugrave; vos concurrents peuvent r&eacute;pondre &agrave; une question d'appel d'offres &agrave; laquelle vous ne pouvez pas r&eacute;pondre.</p>
+    <p style="font-family:'Cairo',sans-serif;font-size:15px;color:#2b3a2c;margin-top:8px;"><span style="color:#48994E;font-weight:700;">Extrait de la biblioth&egrave;que de cas :</span> une organisation priv&eacute;e de taille interm&eacute;diaire a r&eacute;duit sa pr&eacute;paration de plusieurs mois &agrave; quelques semaines en partant du toolkit plut&ocirc;t que d'une page blanche.</p>
+    <div style="margin-top:14px;font-family:'Bakbak One',sans-serif;font-size:20px;color:#48994E;">4,400 USD <span style="font-family:'Cairo',sans-serif;font-size:14px;color:#2b3a2c;font-weight:400;">, licence pour une seule organisation. Moins d'une demi-journ&eacute;e de consultant.</span></div>
+    <a href="mailto:contact@aigovernancechain.com?subject=Demande%20d%27achat%20%3A%20ISO/IEC%2042001%20Certification%20Toolkit" style="display:inline-block;margin-top:12px;background:#48994E;color:#2b3a2c;font-family:'Bakbak One',sans-serif;font-size:16px;padding:10px 26px;border-radius:8px;text-decoration:none;">Obtenir le Certification Toolkit</a>
+  </div>
+
+
+  <!-- Pack 3b: Global Regulation-to-Action Atlas, Full Edition -->
+  <div style="background:#417c46;border:1px solid #5fae65;border-radius:14px;padding:30px;margin-bottom:22px;">
+    <h3 style="font-family:'Bakbak One',sans-serif;color:#2b3a2c;font-size:22px;margin:0 0 10px 0;">
+      Une seule carte, de Bruxelles &agrave; Brasilia et &agrave; S&eacute;oul. Chaque r&eacute;gime, reli&eacute; &agrave; l'action
+    </h3>
+    <p style="font-family:'Cairo',sans-serif;color:#2b3a2c;font-size:16px;line-height:1.7;margin:0 0 12px 0;">
+      <span style="color:#48994E;font-weight:700;">L'Atlas mondial : de la r&eacute;glementation &agrave; l'action, &Eacute;dition compl&egrave;te.</span>
+      Votre mission : r&eacute;pondre &agrave; n'importe quel r&eacute;gulateur de la carte avec des preuves, pas des explications. L'Atlas livre la
+      correspondance obligation par obligation du r&egrave;glement europ&eacute;en sur l'intelligence artificielle, d'ISO/IEC 42001
+      clause par clause, du NIST AI Risk Management Framework, et des r&eacute;gimes v&eacute;rifi&eacute;s d'Am&eacute;rique latine
+      et du Br&eacute;sil, d'Afrique, d'Asie-Pacifique et du Moyen-Orient, chaque ligne nommant l'instrument que vous d&eacute;ployez et
+      la preuve AI GOVERNANCE CHAIN&trade; que vous archivez.
+    </p>
+    <p style="font-family:'Cairo',sans-serif;color:#2b3a2c;font-size:15px;line-height:1.7;margin:0 0 12px 0;">
+      <span style="color:#48994E;font-weight:700;">Le co&ucirc;t de l'attente :</span> la carte r&eacute;glementaire change
+      chaque trimestre, et un document r&eacute;dig&eacute; pour le trimestre pr&eacute;c&eacute;dent r&eacute;pond au r&eacute;gulateur avec la loi du trimestre pr&eacute;c&eacute;dent.
+      Chaque entr&eacute;e est v&eacute;rifi&eacute;e avec son statut juridique et sa date, et le Regulatory Update Service trimestriel
+      garde la carte vivante.
+    </p>
+    <p style="font-family:'Cairo',sans-serif;font-size:16px;margin:0;">
+      <span style="color:#2b3a2c;font-weight:700;">4 400 USD, licence pour une seule organisation.</span>
+      <a href="mailto:contact@aigovernancechain.com?subject=Demande%20d%27achat%20%3A%20Global%20Regulation-to-Action%20Atlas%2C%20Full%20Edition"
+         style="color:#BDE051;font-weight:700;text-decoration:underline;">&nbsp;&nbsp;Demander cet Atlas</a>
+    </p>
+  </div>
+
+  <!-- Pack 4: Board and Executive Governance Pack -->
+  <div style="background:#F1F4E4;border:1px solid #BDE051;border-radius:14px;padding:28px;margin-top:20px;">
+    <div style="font-family:'Bakbak One',sans-serif;font-size:22px;color:#48994E;">R&eacute;pondez &agrave; la question du conseil sur l'IA avant qu'elle ne soit pos&eacute;e</div>
+    <p style="font-family:'Cairo',sans-serif;font-size:16px;color:#2b3a2c;margin-top:10px;"><span style="color:#48994E;font-weight:700;">La mission :</span> donner aux administrateurs et aux dirigeants les instruments de surveillance que leur devoir exige : les mod&egrave;les de rapport au conseil, la structure du briefing ex&eacute;cutif, le mod&egrave;le op&eacute;rationnel du directeur de l'intelligence artificielle, et les questions qu'un conseil devrait poser avant d'approuver toute initiative d'IA.</p>
+    <p style="font-family:'Cairo',sans-serif;font-size:15px;color:#2b3a2c;margin-top:8px;"><span style="color:#48994E;font-weight:700;">L&agrave; o&ugrave; la couche gratuite s'arr&ecirc;te :</span> la synth&egrave;se gratuite pour conseil ouvre la conversation. Le pack fait tourner le cycle de surveillance, trimestre apr&egrave;s trimestre.</p>
+    <p style="font-family:'Cairo',sans-serif;font-size:15px;color:#2b3a2c;margin-top:8px;"><span style="color:#48994E;font-weight:700;">Le co&ucirc;t de l'attente :</span> quand une d&eacute;faillance de l'IA atteint la presse, la deuxi&egrave;me question est toujours ce que le conseil savait, et quand. Un conseil sans registre de surveillance n'a pas de bonne r&eacute;ponse &agrave; cette question.</p>
+    <p style="font-family:'Cairo',sans-serif;font-size:15px;color:#2b3a2c;margin-top:8px;"><span style="color:#48994E;font-weight:700;">Construit par :</span> un membre du conseil consultatif de la Harvard Business Review, fort de d&eacute;cennies d'exp&eacute;rience professionnelle aupr&egrave;s des conseils et des dirigeants, qui &eacute;crit dans la langue que les administrateurs utilisent r&eacute;ellement.</p>
+    <div style="margin-top:14px;font-family:'Bakbak One',sans-serif;font-size:20px;color:#48994E;">3,900 USD <span style="font-family:'Cairo',sans-serif;font-size:14px;color:#2b3a2c;font-weight:400;">, licence pour une seule organisation. Moins d'une heure d'un avocat en gouvernance.</span></div>
+    <a href="mailto:contact@aigovernancechain.com?subject=Demande%20d%27achat%20%3A%20Board%20and%20Executive%20Governance%20Pack" style="display:inline-block;margin-top:12px;background:#48994E;color:#2b3a2c;font-family:'Bakbak One',sans-serif;font-size:16px;padding:10px 26px;border-radius:8px;text-decoration:none;">Obtenir le Board Pack</a>
+  </div>
+
+  <!-- Pack 5: Sycophancy Audit Toolkit -->
+  <div style="background:#F1F4E4;border:1px solid #BDE051;border-radius:14px;padding:28px;margin-top:20px;">
+    <div style="font-family:'Bakbak One',sans-serif;font-size:22px;color:#48994E;">D&eacute;couvrez si votre IA vous dit la v&eacute;rit&eacute;</div>
+    <p style="font-family:'Cairo',sans-serif;font-size:16px;color:#2b3a2c;margin-top:10px;"><span style="color:#48994E;font-weight:700;">La mission :</span> auditer vos syst&egrave;mes pour la d&eacute;faillance qu'aucun autre cadre ne nomme : une intelligence artificielle qui est d'accord avec ses utilisateurs au lieu de leur dire la v&eacute;rit&eacute;. B&acirc;ti sur l'AI Sycophancy Risk Register&trade;, le toolkit contient la batterie de tests compl&egrave;te, le moteur de notation, le playbook de mitigation et le mod&egrave;le de rapport d'audit que votre direction peut lire.</p>
+    <p style="font-family:'Cairo',sans-serif;font-size:15px;color:#2b3a2c;margin-top:8px;"><span style="color:#48994E;font-weight:700;">L&agrave; o&ugrave; la couche gratuite s'arr&ecirc;te :</span> le registre gratuit nomme les huit sch&eacute;mas de d&eacute;faillance. Le toolkit les mesure dans vos syst&egrave;mes et documente ce qu'il trouve.</p>
+    <p style="font-family:'Cairo',sans-serif;font-size:15px;color:#2b3a2c;margin-top:8px;"><span style="color:#48994E;font-weight:700;">Le co&ucirc;t de l'attente :</span> un syst&egrave;me sycophante &eacute;choue en silence : il valide le plan, flatte l'analyse et confirme l'erreur, jusqu'&agrave; ce que la r&eacute;alit&eacute; s'y refuse. Quand l'accord devient visible sous forme de perte, la d&eacute;cision qu'il a corrompue a d&eacute;j&agrave; &eacute;t&eacute; prise.</p>
+    <p style="font-family:'Cairo',sans-serif;font-size:15px;color:#2b3a2c;margin-top:8px;"><span style="color:#48994E;font-weight:700;">Extrait de la biblioth&egrave;que de cas :</span> une micro-&eacute;quipe a intercept&eacute; un mod&egrave;le flatteur avant le lancement gr&acirc;ce &agrave; la batterie de tests. La correction a co&ucirc;t&eacute; une apr&egrave;s-midi. La version non d&eacute;tect&eacute;e avait d&eacute;j&agrave; valid&eacute; une d&eacute;cision de tarification erron&eacute;e.</p>
+    <div style="margin-top:14px;font-family:'Bakbak One',sans-serif;font-size:20px;color:#48994E;">3,900 USD <span style="font-family:'Cairo',sans-serif;font-size:14px;color:#2b3a2c;font-weight:400;">, licence pour une seule organisation. Le seul audit de ce type sur le march&eacute;.</span></div>
+    <a href="mailto:contact@aigovernancechain.com?subject=Demande%20d%27achat%20%3A%20Sycophancy%20Audit%20Toolkit" style="display:inline-block;margin-top:12px;background:#48994E;color:#2b3a2c;font-family:'Bakbak One',sans-serif;font-size:16px;padding:10px 26px;border-radius:8px;text-decoration:none;">Obtenir le Sycophancy Audit Toolkit</a>
+  </div>
+
+  <p style="font-family:'Cairo',sans-serif;font-size:14px;color:#2b3a2c;margin-top:22px;">Chaque pack : livraison imm&eacute;diate apr&egrave;s paiement, politique de remboursement de quatorze jours et licence pour une seule organisation. Grande organisation ou secteur public ? Votre porte sur cette page fixe votre bande et votre parcours.</p>
+</section>
+
+<!-- ===== STEP 2: FLAGSHIP PACKS (rebuilt tier section) ===== -->
+
+<!-- ============ TIER: CORE GOVERNANCE KITS (Step 3, item 1) ============ -->
+<section id="core-kits" style="max-width:1080px;margin:0 auto;padding:56px 28px;">
+  <style>
+    #core-kits .ck-eyebrow{font-family:'Cairo',sans-serif;color:#48994E;font-weight:700;letter-spacing:2px;text-transform:uppercase;font-size:0.85rem;margin-bottom:8px;}
+    #core-kits .ck-title{font-family:'Bakbak One',sans-serif;color:#2E5F31;font-size:2rem;line-height:1.2;margin:0 0 10px 0;}
+    #core-kits .ck-lead{font-family:'Cairo',sans-serif;color:#333;font-size:1.05rem;max-width:820px;margin:0 0 26px 0;}
+    #core-kits .ck-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:18px;}
+    #core-kits .ck-card{background:#F7FAF3;border:1px solid #BDE051;border-radius:12px;padding:22px;display:flex;flex-direction:column;}
+    #core-kits .ck-head{font-family:'Bakbak One',sans-serif;color:#2E5F31;font-size:1.12rem;line-height:1.35;margin:0 0 6px 0;}
+    #core-kits .ck-name{font-family:'Cairo',sans-serif;color:#48994E;font-weight:700;font-size:0.95rem;margin:0 0 10px 0;}
+    #core-kits .ck-body{font-family:'Cairo',sans-serif;color:#333;font-size:0.95rem;margin:0 0 10px 0;}
+    #core-kits .ck-wait{font-family:'Cairo',sans-serif;color:#5C4A00;background:#FDF6DC;border-left:4px solid #BDE051;padding:8px 12px;font-size:0.9rem;margin:0 0 10px 0;}
+    #core-kits .ck-proof{font-family:'Cairo',sans-serif;color:#2E5F31;font-size:0.9rem;font-style:italic;margin:0 0 14px 0;}
+    #core-kits .ck-price{font-family:'Bakbak One',sans-serif;color:#2E5F31;font-size:1.35rem;margin-top:auto;}
+    #core-kits .ck-cta{display:inline-block;font-family:'Cairo',sans-serif;font-weight:700;background:#48994E;color:#F1F4E4;border-radius:8px;padding:10px 18px;text-decoration:none;margin-top:10px;text-align:center;}
+    #core-kits .ck-frame{font-family:'Cairo',sans-serif;color:#333;background:#EFF6E6;border:1px solid #BDE051;border-radius:10px;padding:14px 18px;font-size:0.95rem;margin-top:24px;}
+  </style>
+
+  <div class="ck-eyebrow">Core Governance Kits, les sept disciplines</div>
+  <h2 class="ck-title">Gouvernez chaque discipline avant que l'une d'elles ne vous fasse &eacute;chouer en public</h2>
+  <p class="ck-lead">Chaque kit est la profondeur op&eacute;rationnelle compl&egrave;te d'un pilier de gouvernance : les mod&egrave;les de travail, les instruments de notation et les structures de d&eacute;cision, r&eacute;dig&eacute;s par le cr&eacute;ateur de l'AI Governance Emergency Response Framework (AI-ERF)&trade;. Vos instruments gratuits vous ont dit QUOI et POURQUOI. Ces kits sont le COMMENT. Chacun co&ucirc;te moins d'une journ&eacute;e de consultant senior, et chacun est adapt&eacute; &agrave; la taille, de l'&eacute;quipe de trois personnes au minist&egrave;re national.</p>
+
+  <div class="ck-grid">
+
+    <div class="ck-card">
+      <h3 class="ck-head">Prouvez que vos d&eacute;cisions d'IA sont d&eacute;fendables avant qu'on ne l'exige</h3>
+      <p class="ck-name">AI Ethics Operating Kit</p>
+      <p class="ck-body">La charte du comit&eacute; d'&eacute;thique, le mod&egrave;le de d&eacute;cision &eacute;thique, le registre des risques &eacute;thiques et le pack de rapport au conseil. L'&eacute;thique comme syst&egrave;me d'exploitation, pas comme affiche.</p>
+      <p class="ck-wait">Le co&ucirc;t de l'attente : une d&eacute;faillance &eacute;thique devient publique d&egrave;s qu'un client, un journaliste ou un r&eacute;gulateur la nomme, et &agrave; ce moment-l&agrave;, chaque d&eacute;cision que vous ne pouvez pas documenter se lit comme une d&eacute;cision que vous avez cach&eacute;e.</p>
+      <p class="ck-proof">Preuve : une &eacute;quipe de trois personnes a intercept&eacute; un mod&egrave;le sycophante avant le lancement gr&acirc;ce &agrave; cette discipline, l'incident le moins cher est celui qui ne part jamais en production.</p>
+      <div class="ck-price">1,200 USD</div>
+      <a class="ck-cta" href="mailto:contact@aigovernancechain.com?subject=Purchase%20request%3A%20Core%20Governance%20Kit">Obtenir le kit</a>
+    </div>
+
+    <div class="ck-card">
+      <h3 class="ck-head">Trente risques nomm&eacute;s, chacun not&eacute;, chacun attribu&eacute;, aucun ne vous surprend plus tard</h3>
+      <p class="ck-name">AI Risk Management Kit</p>
+      <p class="ck-body">Le registre complet des risques b&acirc;ti sur la taxonomie des trente risques, le planificateur de traitement, la d&eacute;claration d'app&eacute;tit au risque, le pack de suivi et le rapport de risques au conseil.</p>
+      <p class="ck-wait">Le co&ucirc;t de l'attente : le r&egrave;glement europ&eacute;en sur l'intelligence artificielle pr&eacute;voit des amendes administratives pouvant atteindre 35 millions d'euros ou 7 pour cent du chiffre d'affaires annuel mondial pour les infractions les plus graves. Un risque non cartographi&eacute; est un risque non &eacute;valu&eacute;.</p>
+      <p class="ck-proof">Preuve : une grande organisation priv&eacute;e a install&eacute; des garde-fous avant de faire passer &agrave; l'&eacute;chelle un flux autonome, parce que son registre avait nomm&eacute; le risque en premier.</p>
+      <div class="ck-price">1,400 USD</div>
+      <a class="ck-cta" href="mailto:contact@aigovernancechain.com?subject=Purchase%20request%3A%20Core%20Governance%20Kit">Obtenir le kit</a>
+    </div>
+
+    <div class="ck-card">
+      <h3 class="ck-head">Une gouvernance que vous ne pouvez pas prouver n'existe pas dans un audit</h3>
+      <p class="ck-name">AI Assurance and Audit Kit</p>
+      <p class="ck-body">Le syst&egrave;me de preuves d'assurance, le protocole d'auto&eacute;valuation, le mod&egrave;le de revue ind&eacute;pendante, le pack de preuves d'audit et la carte de pr&eacute;paration &agrave; la certification ISO/IEC 42001.</p>
+      <p class="ck-wait">Le co&ucirc;t de l'attente : ISO/IEC 42001, la premi&egrave;re norme certifiable de syst&egrave;me de management de l'IA, publi&eacute;e en d&eacute;cembre 2023, devient la preuve que demandent les acheteurs et les r&eacute;gulateurs, et la certification prend des trimestres, pas des semaines.</p>
+      <p class="ck-proof">Preuve : un assureur de taille interm&eacute;diaire a d&eacute;couvert que sa gouvernance &eacute;tait r&eacute;elle mais improuvable, une seule lettre d'audit a expos&eacute; l'&eacute;cart que ce kit comble.</p>
+      <div class="ck-price">1,500 USD</div>
+      <a class="ck-cta" href="mailto:contact@aigovernancechain.com?subject=Purchase%20request%3A%20Core%20Governance%20Kit">Obtenir le kit</a>
+    </div>
+
+    <div class="ck-card">
+      <h3 class="ck-head">Vos &eacute;quipes utilisent l'IA chaque jour. La loi attend d&eacute;sormais qu'elles la comprennent</h3>
+      <p class="ck-name">AI Literacy and Culture Program Kit</p>
+      <p class="ck-body">Le programme de formation par r&ocirc;le, l'&eacute;chelle de comp&eacute;tences &agrave; quatre niveaux, le plan de changement de culture et le journal de preuves de formation.</p>
+      <p class="ck-wait">Le co&ucirc;t de l'attente : le r&egrave;glement europ&eacute;en sur l'intelligence artificielle exige des organisations qu'elles assurent un niveau suffisant de ma&icirc;trise de l'IA chez leur personnel, une obligation applicable depuis f&eacute;vrier 2025. Un personnel non form&eacute; est d&eacute;sormais un constat de non-conformit&eacute;.</p>
+      <p class="ck-proof">Preuve : les organisations qui ont form&eacute; en premier ont transform&eacute; l'obligation en comp&eacute;tence, les autres documentent leur rem&eacute;diation.</p>
+      <div class="ck-price">990 USD</div>
+      <a class="ck-cta" href="mailto:contact@aigovernancechain.com?subject=Purchase%20request%3A%20Core%20Governance%20Kit">Obtenir le kit</a>
+    </div>
+
+    <div class="ck-card">
+      <h3 class="ck-head">Le prisme fond&eacute; sur les droits qu'exigent vos acheteurs publics et mondiaux</h3>
+      <p class="ck-name">AI and Human Rights Impact Kit</p>
+      <p class="ck-body">L'&eacute;valuation d'impact sur les droits humains, le protocole de filtrage fond&eacute; sur les droits, le planificateur de mitigation et le pack de rapport de responsabilit&eacute; publique.</p>
+      <p class="ck-wait">Le co&ucirc;t de l'attente : une d&eacute;faillance sur les droits est la seule cat&eacute;gorie d'incident d'IA qu'aucune strat&eacute;gie de communication ne r&eacute;pare, et la commande publique exige de plus en plus l'&eacute;valuation avant le contrat.</p>
+      <p class="ck-proof">Preuve : une agence publique a achev&eacute; son filtrage des droits avant le d&eacute;ploiement et a r&eacute;pondu &agrave; son comit&eacute; de surveillance en une seule s&eacute;ance.</p>
+      <div class="ck-price">1,200 USD</div>
+      <a class="ck-cta" href="mailto:contact@aigovernancechain.com?subject=Purchase%20request%3A%20Core%20Governance%20Kit">Obtenir le kit</a>
+    </div>
+
+    <div class="ck-card">
+      <h3 class="ck-head">Les syst&egrave;mes autonomes agissent sans demander. Gouvernez-les avant qu'ils n'agissent</h3>
+      <p class="ck-name">Frontier and AGI Governance Kit</p>
+      <p class="ck-body">Le mod&egrave;le des six risques de fronti&egrave;re, l'architecture de garde-fous, les sch&eacute;mas de supervision multi-agents et l'&eacute;valuation de pr&eacute;paration au d&eacute;ploiement, la classe de risque la moins gouvern&eacute;e et la plus rapide qui soit.</p>
+      <p class="ck-wait">Le co&ucirc;t de l'attente : les syst&egrave;mes agentiques cumulent les erreurs &agrave; la vitesse de la machine, la premi&egrave;re heure d'une d&eacute;faillance autonome peut ex&eacute;cuter des milliers de d&eacute;cisions qu'aucun humain n'a examin&eacute;es.</p>
+      <p class="ck-proof">Preuve : une grande organisation publique a fait passer &agrave; l'&eacute;chelle l'automatisation agentique de ses services en s&eacute;curit&eacute;, parce que les garde-fous ont &eacute;t&eacute; install&eacute;s d'abord, pas ajout&eacute;s apr&egrave;s coup.</p>
+      <div class="ck-price">1,900 USD</div>
+      <a class="ck-cta" href="mailto:contact@aigovernancechain.com?subject=Purchase%20request%3A%20Core%20Governance%20Kit">Obtenir le kit</a>
+    </div>
+
+  </div>
+
+  <div class="ck-frame">
+    <strong style="color:#2E5F31;">Comment lire ces prix.</strong> Chaque kit co&ucirc;te moins d'une journ&eacute;e de consultant senior, et une fraction d'une mission de pr&eacute;paration. Votre porte fixe votre bande : les petites &eacute;quipes commencent par la bande d'entr&eacute;e du Governance Vault ou un seul kit ; les grandes organisations prennent g&eacute;n&eacute;ralement le Vault et ajoutent les flagship packs ; les acheteurs publics commencent par les kits droits et assurance. Les prix augmentent de dix &agrave; vingt pour cent tous les deux trimestres &agrave; mesure que la norme m&ucirc;rit.
+  </div>
+</section>
+
+<section style="background:#1e3d21;border-radius:18px;max-width:1080px;margin:0 auto;padding:64px 28px;">
+
+  <p style="font-family:'Cairo',sans-serif;color:#BDE051;font-size:14px;letter-spacing:2px;text-transform:uppercase;margin:0 0 10px 0;">Les Flagship Packs</p>
+
+  <h2 style="font-family:'Bakbak One',sans-serif;color:#F1F4E4;font-size:34px;line-height:1.2;margin:0 0 14px 0;">
+    Une gouvernance que vous prouvez dans un audit, pas que vous expliquez en r&eacute;union
+  </h2>
+
+  <p style="font-family:'Cairo',sans-serif;color:#F1F4E4;font-size:17px;line-height:1.7;max-width:820px;margin:0 0 8px 0;">
+    Chaque flagship pack r&eacute;sout de bout en bout un probl&egrave;me co&ucirc;teux et nomm&eacute;. Chaque pack est b&acirc;ti sur les m&ecirc;mes
+    disciplines que les r&eacute;gulateurs et les conseils reconnaissent d&eacute;j&agrave; : le r&egrave;glement europ&eacute;en sur l'intelligence artificielle
+    (EU AI Act, r&egrave;glement (UE) 2024/1689), ISO/IEC 42001 (la premi&egrave;re norme certifiable de syst&egrave;me de management
+    de l'IA, publi&eacute;e en d&eacute;cembre 2023) et le NIST AI Risk Management Framework (AI RMF).
+  </p>
+
+  <p style="font-family:'Cairo',sans-serif;color:#BDE051;font-size:15px;line-height:1.6;max-width:820px;margin:0 0 36px 0;">
+    &Eacute;valuez-les face &agrave; la vraie alternative : chaque pack co&ucirc;te une fraction d'une seule mission de pr&eacute;paration, et moins que les deux premiers jours d'un consultant senior. Ce sont des instruments &agrave; prix fixe, pas des missions ouvertes.
+  </p>
+
+  <!-- Pack 1: AI-ERF Implementation Pack (the anchor of the tier) -->
+  <div style="background:#3f8745;border:1px solid #BDE051;border-radius:14px;padding:30px;margin-bottom:22px;">
+    <p style="font-family:'Cairo',sans-serif;color:#BDE051;font-size:13px;letter-spacing:1.5px;text-transform:uppercase;margin:0 0 6px 0;">Flagship</p>
+    <h3 style="font-family:'Bakbak One',sans-serif;color:#F1F4E4;font-size:24px;margin:0 0 10px 0;">
+      Quand votre IA &eacute;choue en production, la premi&egrave;re heure d&eacute;cide de l'issue
+    </h3>
+    <p style="font-family:'Cairo',sans-serif;color:#F1F4E4;font-size:16px;line-height:1.7;margin:0 0 12px 0;">
+      <span style="color:#BDE051;font-weight:700;">L'AI-ERF&trade; Implementation Pack.</span>
+      Votre mission : mener une r&eacute;ponse ma&icirc;tris&eacute;e quand un syst&egrave;me d'IA d&eacute;raille, avec des r&ocirc;les nomm&eacute;s, une d&eacute;cision
+      de s&eacute;v&eacute;rit&eacute; et des preuves qui survivent &agrave; la revue. Le pack transforme l'AI Governance Emergency
+      Response Framework (AI-ERF)&trade; en instruments de travail : le journal des incidents, la
+      feuille de gradation de la s&eacute;v&eacute;rit&eacute;, les cartes de r&ocirc;le, le kit d'exercices et de simulations, et les mod&egrave;les de rapport au conseil.
+    </p>
+    <p style="font-family:'Cairo',sans-serif;color:#F1F4E4;font-size:15px;line-height:1.7;margin:0 0 12px 0;">
+      <span style="color:#BDE051;font-weight:700;">Le co&ucirc;t de l'attente :</span> un incident non gouvern&eacute; est
+      confin&eacute; par improvisation, et l'improvisation d&eacute;truit les preuves dont vous aurez besoin pour le r&eacute;gulateur,
+      le conseil et l'assureur. Preuve du terrain : un h&ocirc;pital dont la premi&egrave;re heure &eacute;tait r&eacute;p&eacute;t&eacute;e s'est arr&ecirc;t&eacute; en
+      neuf minutes ; un d&eacute;taillant qui a corrig&eacute; trop vite a perdu les preuves et l'a pay&eacute; deux fois.
+    </p>
+    <p style="font-family:'Cairo',sans-serif;font-size:16px;margin:0;">
+      <span style="color:#F1F4E4;font-weight:700;">4 900 USD, licence pour une seule organisation.</span>
+      <span style="color:#BDE051;">&nbsp;&nbsp;Convient &agrave; chaque niveau : une guidance adapt&eacute;e &agrave; la taille, de l'&eacute;quipe de trois
+      personnes au minist&egrave;re national.</span>
+    </p>
+  </div>
+
+  <!-- Pack 2: EU AI Act Compliance Pack -->
+  <div style="background:#417c46;border:1px solid #5fae65;border-radius:14px;padding:30px;margin-bottom:22px;">
+    <h3 style="font-family:'Bakbak One',sans-serif;color:#F1F4E4;font-size:22px;margin:0 0 10px 0;">
+      Classez chaque syst&egrave;me avant que le r&eacute;gulateur ne le classe pour vous
+    </h3>
+    <p style="font-family:'Cairo',sans-serif;color:#F1F4E4;font-size:16px;line-height:1.7;margin:0 0 12px 0;">
+      <span style="color:#BDE051;font-weight:700;">L'EU AI Act Compliance Pack.</span>
+      Votre mission : placer chaque syst&egrave;me d'IA dans le bon niveau de risque, documenter la conclusion et remplir les
+      obligations qui en d&eacute;coulent. Le pack livre le classificateur de niveaux de risque, la liste des obligations
+      &agrave; haut risque, les mod&egrave;les de transparence, le dossier de documentation technique et le calendrier de conformit&eacute;.
+    </p>
+    <p style="font-family:'Cairo',sans-serif;color:#F1F4E4;font-size:15px;line-height:1.7;margin:0 0 12px 0;">
+      <span style="color:#BDE051;font-weight:700;">Le co&ucirc;t de l'attente :</span> l'EU AI Act pr&eacute;voit
+      des amendes administratives pouvant atteindre 35 millions d'euros ou 7 pour cent du chiffre d'affaires annuel mondial pour
+      les pratiques interdites, et ses obligations entrent en vigueur &agrave; des dates publi&eacute;es. Preuve du
+      terrain : une petite agence publique a achev&eacute; sa classification en une apr&egrave;s-midi avec ces instruments.
+    </p>
+    <p style="font-family:'Cairo',sans-serif;font-size:16px;margin:0;">
+      <span style="color:#F1F4E4;font-weight:700;">4 200 USD, licence pour une seule organisation.</span>
+    </p>
+  </div>
+
+  <!-- Pack 3: ISO/IEC 42001 Certification Toolkit -->
+  <div style="background:#417c46;border:1px solid #5fae65;border-radius:14px;padding:30px;margin-bottom:22px;">
+    <h3 style="font-family:'Bakbak One',sans-serif;color:#F1F4E4;font-size:22px;margin:0 0 10px 0;">
+      La certification, c'est des trimestres de travail. Commencez avec les documents d&eacute;j&agrave; r&eacute;dig&eacute;s
+    </h3>
+    <p style="font-family:'Cairo',sans-serif;color:#F1F4E4;font-size:16px;line-height:1.7;margin:0 0 12px 0;">
+      <span style="color:#BDE051;font-weight:700;">L'ISO/IEC 42001 Certification Toolkit.</span>
+      Votre mission : construire un syst&egrave;me de management de l'IA certifiable sans engager un cabinet pour r&eacute;diger des documents que
+      vous pourriez poss&eacute;der. Le toolkit livre le pack de politiques, le guide de mise en &oelig;uvre des contr&ocirc;les, le kit
+      d'audit interne, le mod&egrave;le de revue de direction et la boucle d'am&eacute;lioration continue.
+    </p>
+    <p style="font-family:'Cairo',sans-serif;color:#F1F4E4;font-size:15px;line-height:1.7;margin:0 0 12px 0;">
+      <span style="color:#BDE051;font-weight:700;">Le co&ucirc;t de l'attente :</span> les cycles de certification se comptent en
+      trimestres, et chaque trimestre sans certification est un trimestre o&ugrave; vos concurrents peuvent revendiquer la preuve que vous ne pouvez pas revendiquer.
+      Preuve du terrain : une organisation de taille interm&eacute;diaire a r&eacute;duit sa phase de pr&eacute;paration de plusieurs mois &agrave; quelques semaines avec une base
+      documentaire pr&eacute;construite.
+    </p>
+    <p style="font-family:'Cairo',sans-serif;font-size:16px;margin:0;">
+      <span style="color:#F1F4E4;font-weight:700;">4 400 USD, licence pour une seule organisation.</span>
+    </p>
+  </div>
+
+  <!-- Pack 4: Board and Executive Governance Pack -->
+  <div style="background:#417c46;border:1px solid #5fae65;border-radius:14px;padding:30px;margin-bottom:22px;">
+    <h3 style="font-family:'Bakbak One',sans-serif;color:#F1F4E4;font-size:22px;margin:0 0 10px 0;">
+      Le conseil posera la question. Arrivez avec des r&eacute;ponses qu'il peut archiver
+    </h3>
+    <p style="font-family:'Cairo',sans-serif;color:#F1F4E4;font-size:16px;line-height:1.7;margin:0 0 12px 0;">
+      <span style="color:#BDE051;font-weight:700;">Le Board and Executive Governance Pack.</span>
+      Votre mission : donner aux administrateurs et aux actionnaires une gouvernance qu'ils peuvent voir, questionner et d&eacute;fendre. Le pack
+      livre les mod&egrave;les de rapport au conseil, le mod&egrave;le op&eacute;rationnel du directeur de l'intelligence artificielle (CAIO),
+      le jeu de briefings ex&eacute;cutifs et l'agenda trimestriel de gouvernance.
+    </p>
+    <p style="font-family:'Cairo',sans-serif;color:#F1F4E4;font-size:15px;line-height:1.7;margin:0 0 12px 0;">
+      <span style="color:#BDE051;font-weight:700;">Le co&ucirc;t de l'attente :</span> un conseil qui ne peut pas prouver
+      sa surveillance de l'IA est un conseil expos&eacute;, et les administrateurs le savent. R&eacute;dig&eacute; par un membre du conseil consultatif de la Harvard
+      Business Review : c'est le pack &eacute;crit dans la langue que la salle du conseil parle d&eacute;j&agrave;.
+    </p>
+    <p style="font-family:'Cairo',sans-serif;font-size:16px;margin:0;">
+      <span style="color:#F1F4E4;font-weight:700;">3 900 USD, licence pour une seule organisation.</span>
+    </p>
+  </div>
+
+  <!-- Pack 5: Sycophancy Audit Toolkit -->
+  <div style="background:#417c46;border:1px solid #5fae65;border-radius:14px;padding:30px;margin-bottom:26px;">
+    <h3 style="font-family:'Bakbak One',sans-serif;color:#F1F4E4;font-size:22px;margin:0 0 10px 0;">
+      Votre IA est d'accord avec vous. C'est la d&eacute;faillance que personne d'autre n'audite
+    </h3>
+    <p style="font-family:'Cairo',sans-serif;color:#F1F4E4;font-size:16px;line-height:1.7;margin:0 0 12px 0;">
+      <span style="color:#BDE051;font-weight:700;">Le Sycophancy Audit Toolkit.</span>
+      Votre mission : prouver que vos syst&egrave;mes disent la v&eacute;rit&eacute; sous pression, avant qu'un mod&egrave;le flatteur ne conduise votre
+      organisation vers une d&eacute;cision qu'elle ne peut pas d&eacute;fendre. B&acirc;ti sur l'AI Sycophancy Risk Register&trade;, le
+      toolkit livre la batterie de tests compl&egrave;te, le moteur de notation, le playbook de mitigation et le mod&egrave;le de
+      rapport d'audit.
+    </p>
+    <p style="font-family:'Cairo',sans-serif;color:#F1F4E4;font-size:15px;line-height:1.7;margin:0 0 12px 0;">
+      <span style="color:#BDE051;font-weight:700;">Le co&ucirc;t de l'attente :</span> la d&eacute;faillance sycophante est
+      invisible jusqu'au jour o&ugrave; elle devient publique, parce que le syst&egrave;me n'est jamais en d&eacute;saccord avec la personne qui le pilote.
+      Preuve du terrain : une micro-&eacute;quipe a intercept&eacute; un mod&egrave;le sycophante avant le lancement avec exactement cette batterie.
+      C'est la cat&eacute;gorie qu'AI GOVERNANCE CHAIN&trade; a nomm&eacute;e et qu'elle poss&egrave;de.
+    </p>
+    <p style="font-family:'Cairo',sans-serif;font-size:16px;margin:0;">
+      <span style="color:#F1F4E4;font-weight:700;">3 900 USD, licence pour une seule organisation.</span>
+    </p>
+  </div>
+
+  <!-- Risk reversal + tier CTA -->
+  <div style="border-top:1px solid #BDE051;padding-top:22px;">
+    <p class="pricing-note">Chaque flagship pack est un achat direct, d&eacute;lib&eacute;r&eacute;ment plac&eacute; sous le seuil de la conversation. Tout ce qui d&eacute;passe 5 000 USD, la bande entreprise du Governance Vault, les sprints, l'audit et le programme de transformation, commence par une conversation, pas par un panier. Les prix montent &agrave; mesure que la norme m&ucirc;rit : une augmentation publi&eacute;e de dix &agrave; vingt pour cent tous les deux trimestres.</p>
+<p style="font-family:'Cairo',sans-serif;color:#F1F4E4;font-size:15px;line-height:1.7;max-width:820px;margin:0 0 10px 0;">
+      <span style="color:#BDE051;font-weight:700;">La garantie :</span> chaque pack est livr&eacute;
+      imm&eacute;diatement apr&egrave;s paiement, sous licence pour votre organisation, et couvert par une politique de remboursement claire.
+      Si un pack ne correspond pas &agrave; votre niveau, nous vous orientons vers celui qui correspond.
+    </p>
+    <p style="font-family:'Cairo',sans-serif;color:#F1F4E4;font-size:15px;line-height:1.7;max-width:820px;margin:0;">
+      Vous ne savez pas quel pack est le v&ocirc;tre ? Utilisez les portes ci-dessus : la taille de votre organisation fixe la profondeur et la
+      fourchette de prix, votre si&egrave;ge fixe le premier produit. Ou commencez par le diagnostic gratuit et laissez le r&eacute;sultat vous orienter.
+    </p>
+  </div>
+
+</section>
+<!-- ===== END STEP 2 ===== -->
+
+
+<!-- ============ RECURRING PROGRAMS (Step 3, item 2) ============ -->
+<section id="recurring" style="max-width:1080px;margin:0 auto;padding:56px 28px;">
+  <style>
+    #recurring .rc-eyebrow{font-family:'Cairo',sans-serif;color:#48994E;font-weight:700;letter-spacing:2px;text-transform:uppercase;font-size:0.85rem;margin-bottom:8px;}
+    #recurring .rc-title{font-family:'Bakbak One',sans-serif;color:#2E5F31;font-size:2rem;line-height:1.2;margin:0 0 10px 0;}
+    #recurring .rc-lead{font-family:'Cairo',sans-serif;color:#333;font-size:1.05rem;max-width:820px;margin:0 0 26px 0;}
+    #recurring .rc-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:18px;}
+    #recurring .rc-card{background:#F7FAF3;border:1px solid #BDE051;border-radius:12px;padding:22px;display:flex;flex-direction:column;}
+    #recurring .rc-card.rc-hero{border:2px solid #48994E;background:#EFF6E6;}
+    #recurring .rc-badge{display:inline-block;font-family:'Cairo',sans-serif;font-weight:700;font-size:0.75rem;letter-spacing:1px;text-transform:uppercase;background:#48994E;color:#F1F4E4;border-radius:6px;padding:3px 10px;margin:0 0 10px 0;align-self:flex-start;}
+    #recurring .rc-head{font-family:'Bakbak One',sans-serif;color:#2E5F31;font-size:1.12rem;line-height:1.35;margin:0 0 6px 0;}
+    #recurring .rc-name{font-family:'Cairo',sans-serif;color:#48994E;font-weight:700;font-size:0.95rem;margin:0 0 10px 0;}
+    #recurring .rc-body{font-family:'Cairo',sans-serif;color:#333;font-size:0.95rem;margin:0 0 10px 0;}
+    #recurring .rc-wait{font-family:'Cairo',sans-serif;color:#5C4A00;background:#FDF6DC;border-left:4px solid #BDE051;padding:8px 12px;font-size:0.9rem;margin:0 0 10px 0;}
+    #recurring .rc-proof{font-family:'Cairo',sans-serif;color:#2E5F31;font-size:0.9rem;font-style:italic;margin:0 0 14px 0;}
+    #recurring .rc-price{font-family:'Bakbak One',sans-serif;color:#2E5F31;font-size:1.35rem;margin-top:auto;}
+    #recurring .rc-sub{font-family:'Cairo',sans-serif;color:#333;font-size:0.85rem;margin:4px 0 0 0;}
+    #recurring .rc-cta{display:inline-block;font-family:'Cairo',sans-serif;font-weight:700;background:#48994E;color:#F1F4E4;border-radius:8px;padding:10px 18px;text-decoration:none;margin-top:10px;text-align:center;}
+    #recurring .rc-frame{font-family:'Cairo',sans-serif;color:#333;background:#EFF6E6;border:1px solid #BDE051;border-radius:10px;padding:14px 18px;font-size:0.95rem;margin-top:24px;}
+  </style>
+
+  <div class="rc-eyebrow">Programmes r&eacute;currents, une gouvernance qui reste &agrave; jour</div>
+  <h2 class="rc-title">Un document vieillit. Une norme reste vivante. Abonnez-vous &agrave; la seconde</h2>
+  <p class="rc-lead">La r&eacute;glementation de l'intelligence artificielle &eacute;volue chaque trimestre et vos syst&egrave;mes changent chaque semaine : une gouvernance achet&eacute;e une seule fois est une gouvernance qui expire en silence. Ces programmes gardent vos instruments, vos preuves et vos &eacute;quipes &agrave; jour, et ils constituent la couche qui ne peut pas &ecirc;tre pirat&eacute;e : la valeur, c'est l'acc&egrave;s, l'actualit&eacute; et l'auteur, pas un fichier.</p>
+
+  <div class="rc-grid">
+
+    <div class="rc-card rc-hero">
+      <span class="rc-badge">Le choix par d&eacute;faut</span>
+      <h3 class="rc-head">Chaque instrument, chaque mise &agrave; jour, une seule licence : toute la norme, toujours &agrave; jour</h3>
+      <p class="rc-name">Le Governance Vault, licence annuelle en acc&egrave;s complet</p>
+      <p class="rc-body">La biblioth&egrave;que compl&egrave;te : les sept kits piliers, les flagship packs, chaque mod&egrave;le et chaque instrument de notation, plus chaque mise &agrave; jour trimestrielle tant que vous &ecirc;tes abonn&eacute;. Band&eacute;e selon votre porte, de l'&eacute;quipe de trois personnes &agrave; l'entreprise de tr&egrave;s grande taille.</p>
+      <p class="rc-wait">Le co&ucirc;t de l'attente : acheter les instruments un par un co&ucirc;te plus cher d&egrave;s le deuxi&egrave;me achat, et laisse entre-temps chaque discipline non achet&eacute;e sans gouvernance.</p>
+      <p class="rc-proof">Preuve : une organisation publique de taille interm&eacute;diaire est pass&eacute;e de z&eacute;ro &agrave; pr&ecirc;te pour la certification en deux trimestres en exploitant la biblioth&egrave;que compl&egrave;te comme un seul syst&egrave;me.</p>
+      <div class="rc-price">4 900 &agrave; 24 000 USD par an</div>
+      <p class="rc-sub">Band&eacute; selon votre porte. Les bandes entreprise et secteur public commencent par une conversation, pas par un panier.</p>
+      <a class="rc-cta" href="mailto:contact@aigovernancechain.com?subject=Governance%20Vault%20%3A%20demande%20de%20ma%20bande">Choisir votre bande</a>
+    </div>
+
+    <div class="rc-card">
+      <h3 class="rc-head">Portez le titre que personne d'autre ne peut encore d&eacute;livrer</h3>
+      <p class="rc-name">Certified Practitioner Program</p>
+      <p class="rc-body">Le titre avec examen en gouvernance op&eacute;rationnelle de l'IA, b&acirc;ti sur l'AI Governance Emergency Response Framework (AI-ERF)&trade; et les sept piliers : l'&eacute;valuation, le badge v&eacute;rifiable et l'inscription &agrave; l'annuaire des praticiens certifi&eacute;s.</p>
+      <p class="rc-wait">Le co&ucirc;t de l'attente : le march&eacute; cr&eacute;e des postes de gouvernance de l'IA plus vite qu'il ne peut les v&eacute;rifier, et les premiers titulaires du titre fixent la barre &agrave; laquelle tous les suivants seront mesur&eacute;s.</p>
+      <p class="rc-proof">Le renouvellement est fix&eacute; &agrave; exactement dix pour cent du plafond de certification, la convention des organismes de certification &eacute;tablis.</p>
+      <div class="rc-price">1 900 &agrave; 3 900 USD par candidat</div>
+      <p class="rc-sub">Renouvellement annuel de 390 USD, ou 990 USD pour trois ans : les cadres de l'ann&eacute;e en cours, la r&eacute;attestation et l'inscription &agrave; l'annuaire.</p>
+      <a class="rc-cta" href="mailto:contact@aigovernancechain.com?subject=Certified%20Practitioner%20Program%20%3A%20demande%20d%27inscription">Se faire certifier</a>
+    </div>
+
+    <div class="rc-card">
+      <h3 class="rc-head">Gardez votre gouvernance &agrave; jour pendant que les praticiens autour de vous gardent la leur</h3>
+      <p class="rc-name">The Governance Circle, adh&eacute;sion</p>
+      <p class="rc-body">L'adh&eacute;sion o&ugrave; les praticiens gardent leur gouvernance vivante : la cadence trimestrielle, les sessions de travail, les sch&eacute;mas de terrain partag&eacute;s et l'acc&egrave;s direct &agrave; la norme en &eacute;volution.</p>
+      <p class="rc-wait">Le co&ucirc;t de l'attente : une gouvernance pratiqu&eacute;e seule d&eacute;rive, et le praticien qui d&eacute;couvre un sch&eacute;ma de d&eacute;faillance en second le paie au prix fort.</p>
+      <p class="rc-proof">Les niveaux portent le nom du r&eacute;sultat, Practitioner, Professional et Partner, jamais celui du prix.</p>
+      <div class="rc-price">99 &agrave; 299 USD par mois</div>
+      <a class="rc-cta" href="mailto:contact@aigovernancechain.com?subject=The%20Governance%20Circle%3A%20membership%20request">Rejoindre le Circle</a>
+    </div>
+
+    <div class="rc-card">
+      <h3 class="rc-head">Quand la r&eacute;glementation bouge, vos documents bougent avec elle</h3>
+      <p class="rc-name">The Living Standard, service de mise &agrave; jour r&eacute;glementaire</p>
+      <p class="rc-body">Le pack de mise &agrave; jour trimestriel : ce qui a chang&eacute; dans le r&egrave;glement europ&eacute;en sur l'intelligence artificielle et dans le paysage des normes, ce que cela signifie pour vous, et exactement quels instruments r&eacute;viser.</p>
+      <p class="rc-wait">Le co&ucirc;t de l'attente : le r&egrave;glement europ&eacute;en sur l'intelligence artificielle s'applique par phases &agrave; des dates publi&eacute;es, et un document r&eacute;dig&eacute; pour le trimestre pr&eacute;c&eacute;dent r&eacute;pond au r&eacute;gulateur avec la loi du trimestre pr&eacute;c&eacute;dent.</p>
+      <div class="rc-price">Inclus dans le Vault</div>
+      <p class="rc-sub">Aussi disponible seul pour les d&eacute;tenteurs d'un seul kit.</p>
+      <a class="rc-cta" href="mailto:contact@aigovernancechain.com?subject=The%20Living%20Standard%3A%20subscription%20request">Rester &agrave; jour</a>
+    </div>
+
+    <div class="rc-card">
+      <h3 class="rc-head">Sachez ce qu'on demande aux conseils avant que le v&ocirc;tre ne vous le demande</h3>
+      <p class="rc-name">L'Intelligence Subscription, briefing mensuel</p>
+      <p class="rc-body">Le briefing ex&eacute;cutif mensuel : les sch&eacute;mas de cas d'incident, le radar r&eacute;glementaire et les questions que les conseils et les r&eacute;gulateurs posent ce trimestre, &eacute;crits pour les dirigeants qui doivent y r&eacute;pondre.</p>
+      <p class="rc-wait">Le co&ucirc;t de l'attente : le dirigeant qui d&eacute;couvre une attente de gouvernance lors de sa propre r&eacute;union du conseil a d&eacute;j&agrave; &eacute;chou&eacute; &agrave; cette r&eacute;union.</p>
+      <div class="rc-price">Abonnement mensuel premium</div>
+      <p class="rc-sub">Commence par une conversation, au prix de votre porte.</p>
+      <a class="rc-cta" href="mailto:contact@aigovernancechain.com?subject=Intelligence%20Subscription%3A%20briefing%20request">Demander le briefing</a>
+    </div>
+
+  </div>
+
+  <div class="rc-frame">
+    <strong>Comment lire ces prix :</strong> une ann&eacute;e compl&egrave;te du Vault &agrave; la bande petite &eacute;quipe co&ucirc;te moins de deux jours de consultant senior, et les programmes r&eacute;currents sont la couche qui garde &agrave; jour tout ce que vous poss&eacute;dez. Votre porte fixe votre bande, votre si&egrave;ge fixe votre premier programme. Tout ce qui d&eacute;passe 5 000 USD commence par une conversation, pas par un panier, et les prix augmentent de dix &agrave; vingt pour cent tous les deux trimestres &agrave; mesure que la norme m&ucirc;rit.
+  </div>
+</section>
+
+
+<section id="options" class="tier">
+  <div class="wrap">
+    <div class="section-kicker">La comparaison honn&ecirc;te</div>
+    <h2 class="tier-title">Vous avez quatre options. Une seule est tarif&eacute;e ainsi.</h2>
+    <p class="tier-intro">Chaque organisation qui d&eacute;ploie l'intelligence artificielle (IA) la gouvernera d'une mani&egrave;re ou d'une autre. La seule question est le chemin que vous prenez, ce qu'il co&ucirc;te, et ce que vous tenez entre les mains &agrave; la fin. Voici la comparaison, &eacute;nonc&eacute;e simplement.</p>
+
+    <table class="options-table">
+      <thead>
+        <tr>
+          <th>Votre option</th>
+          <th>Ce que cela co&ucirc;te</th>
+          <th>D&eacute;lai avant la valeur</th>
+          <th>Ce que vous tenez &agrave; la fin</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>Ne rien faire</strong></td>
+          <td>Z&eacute;ro aujourd'hui. Le r&egrave;glement europ&eacute;en sur l'intelligence artificielle (EU AI Act) pr&eacute;voit des amendes administratives pouvant atteindre 35 millions d'euros ou 7 pour cent du chiffre d'affaires annuel mondial pour les infractions les plus graves, et ses obligations entrent d&eacute;j&agrave; en vigueur &agrave; des dates publi&eacute;es.</td>
+          <td>Exposition imm&eacute;diate, aggrav&eacute;e chaque trimestre</td>
+          <td>Une explication, livr&eacute;e apr&egrave;s la d&eacute;faillance, &agrave; un conseil qui demandait des documents</td>
+        </tr>
+        <tr>
+          <td><strong>Engager un cabinet de conseil</strong></td>
+          <td>Des missions g&eacute;n&eacute;ralement chiffr&eacute;es entre plusieurs centaines de milliers et plusieurs millions</td>
+          <td>Des mois de cadrage avant le premier livrable</td>
+          <td>Un jeu de diapositives et une &eacute;quipe qui repart. La m&eacute;thodologie franchit la porte avec elle.</td>
+        </tr>
+        <tr>
+          <td><strong>Le construire en interne</strong></td>
+          <td>Un recrutement senior plus des mois de salaire charg&eacute;, en partant d'une page blanche</td>
+          <td>Des trimestres, appris par essais et erreurs sur vos propres syst&egrave;mes</td>
+          <td>Un premier brouillon, jamais confront&eacute; &agrave; une norme externe</td>
+        </tr>
+        <tr>
+          <td class="highlight-cell"><strong>D&eacute;ployer ce catalogue</strong></td>
+          <td class="highlight-cell">990 &agrave; 4 900 USD par instrument, 4 900 &agrave; 24 000 USD par an pour l'ensemble</td>
+          <td class="highlight-cell">Des documents op&eacute;rationnels cette semaine, r&eacute;dig&eacute;s par une autorit&eacute; nomm&eacute;e</td>
+          <td class="highlight-cell">La couche op&eacute;rationnelle de la gouvernance de l'IA : des instruments que vous poss&eacute;dez, des preuves que vous pouvez archiver, et une norme qui reste &agrave; jour</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <p class="options-note">Le cadrage qui compte : chaque instrument ici co&ucirc;te une fraction d'une seule mission de pr&eacute;paration, et le Vault annuel complet co&ucirc;te moins d'une semaine de consultant senior. Vous ne choisissez pas entre bon march&eacute; et cher. Vous choisissez entre poss&eacute;der la couche op&eacute;rationnelle maintenant et la payer plusieurs fois son prix apr&egrave;s l'incident.</p>
+  </div>
+</section>
+
+<section id="guarantee" class="tier close-sequence">
+  <div class="wrap">
+    <div class="section-kicker">Le point de d&eacute;cision</div>
+    <h2 class="tier-title">Achetez sans risque. D&eacute;cidez sans pression.</h2>
+
+    <div class="close-grid">
+      <div class="close-block">
+        <h3 class="close-head">La garantie</h3>
+        <p>Chaque instrument en achat direct est couvert par un remboursement de quatorze jours, sans question. Si un kit ne donne pas &agrave; votre organisation un instrument de gouvernance op&eacute;rationnel qu'elle peut d&eacute;ployer, vous &ecirc;tes rembours&eacute;. Les abonnements s'annulent &agrave; tout moment. Le risque de l'essai repose sur l'auteur, pas sur vous.</p>
+      </div>
+      <div class="close-block">
+        <h3 class="close-head">L'urgence honn&ecirc;te</h3>
+        <p>Pas de compte &agrave; rebours ici. L'urgence, c'est le calendrier r&eacute;glementaire lui-m&ecirc;me : les obligations de l'EU AI Act entrent en vigueur &agrave; des dates d&eacute;j&agrave; publi&eacute;es, la certification International Organization for Standardization / International Electrotechnical Commission (ISO/IEC) 42001 prend des trimestres, et les prix du catalogue augmentent de dix &agrave; vingt pour cent tous les deux trimestres &agrave; mesure que la norme m&ucirc;rit. Les premiers acheteurs paient le moins et sont pr&ecirc;ts le plus t&ocirc;t.</p>
+      </div>
+      <div class="close-block">
+        <h3 class="close-head">L'autorit&eacute; derri&egrave;re chaque page</h3>
+        <p>Chaque instrument est r&eacute;dig&eacute; par Mathieu K. Gouanou : des d&eacute;cennies d'exp&eacute;rience professionnelle comme strat&egrave;ge, analyste d'affaires et architecte de l'IA, membre du conseil consultatif de la Harvard Business Review, auteur de l'AI Governance Emergency Response Framework (AI-ERF)&trade; et cr&eacute;ateur de l'AI Sycophancy Risk Register&trade;. Ce n'est pas une boutique de mod&egrave;les. C'est une norme nomm&eacute;e, avec un auteur nomm&eacute; qui la garantit.</p>
+      </div>
+    </div>
+
+    <div class="final-cta">
+      <h3 class="final-cta-title">Commencez l&agrave; o&ugrave; vous &ecirc;tes. Trente secondes d&eacute;cident de votre porte.</h3>
+      <p>La taille de votre organisation fixe votre bande. Votre si&egrave;ge fixe votre premier instrument. Les routeurs ci-dessus vous placent dans exactement un parcours, que vous soyez une &eacute;quipe de trois personnes ou un minist&egrave;re national.</p>
+      <p class="cta-row">
+        <a class="btn btn-primary" href="#doors">Trouvez votre porte en 30 secondes</a>
+        <a class="btn btn-secondary" href="mailto:contact@aigovernancechain.com">Ouvrir la conversation (missions au-dessus de 5 000 USD)</a>
+      </p>
+      <p class="cta-under">Pas encore pr&ecirc;t &agrave; acheter ? La couche gratuite contient plus de vingt instruments op&eacute;rationnels. Prenez-les, utilisez-les, et revenez quand le conseil commencera &agrave; poser des questions.</p>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="social-links" style="margin:0 0 14px 0;">
+      <span style="font-family:'Bakbak One',sans-serif;color:#BDE051;font-size:0.95rem;letter-spacing:0.5px;">SUIVEZ LE TRAVAIL</span><br>
+  <a href="https://www.linkedin.com/in/mathieugouanou/" style="color:#F1F4E4;text-decoration:underline;margin-right:14px;">LinkedIn</a>
+  <a href="https://x.com/mathieugouanou" style="color:#F1F4E4;text-decoration:underline;margin-right:14px;">X (Twitter)</a>
+  <a href="https://www.youtube.com/@mathieugouanou" style="color:#F1F4E4;text-decoration:underline;margin-right:14px;">YouTube</a>
+  <a href="https://github.com/aigovernancechain" style="color:#F1F4E4;text-decoration:underline;">GitHub</a>
+    </div>
+    <p style="color:#F1F4E4;"><b>AI GOVERNANCE CHAIN&#8482;</b> &nbsp;|&nbsp; &#169; 2026 Mathieu K. Gouanou. Tous droits r&eacute;serv&eacute;s. &nbsp;|&nbsp; Membre du conseil consultatif de la Harvard Business Review</p>
+    <p style="color:#BDE051;font-weight:bold;">Norme documentaire : une gouvernance de l&#39;IA centr&eacute;e sur l&#39;humain.</p>
+  </div>
+</footer>
+
+</body>
+</html>

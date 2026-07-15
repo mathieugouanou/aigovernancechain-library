@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+    <html lang="pt-BR">
+    <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>AI GOVERNANCE CHAIN™ | Governança de IA centrada no ser humano</title>
+    <meta name="description" content="AI GOVERNANCE CHAIN™: instrumentos de governança de IA gratuitos e completos, do registro de riscos de bajulação ao mapa da jornada, por Mathieu K. Gouanou.">
+    <meta property="og:title" content="AI GOVERNANCE CHAIN™ | Governança de IA centrada no ser humano">
+    <meta property="og:description" content="Governança de IA centrada no ser humano. Instrumentos gratuitos e completos para organizações de qualquer tamanho.">
+    <meta property="og:image" content="../../assets/social-card.png">
+    <link href="https://fonts.googleapis.com/css2?family=Bakbak+One&family=Cairo:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+    :root{--brand-dark:#1e3d21;--slate:#3a6f40;--accent:#BDE051;--ink:#2a5230;--soft:#8fae91;--bg:#F1F4E4;--line:#eef4ee;--gold:#BDE051}
+    *{box-sizing:border-box;margin:0;padding:0}
+    body{font-family:'Cairo',sans-serif;color:var(--ink);background:var(--bg);line-height:1.6}
+    a{color:var(--accent);text-decoration:none}
+    a:hover{text-decoration:underline}
+    .wrap{max-width:1060px;margin:0 auto;padding:0 22px}
+    .langbar{background:var(--brand-dark);color:#e3eee4;font-size:13px;text-align:center;padding:8px}
+    .langbar a{color:#fff;margin:0 8px;font-weight:600}
+    header.hero{background:linear-gradient(135deg,#1e3d21 0%,#3a6f40 100%);color:#fff;padding:64px 0 56px}
+    .hero h1{font-size:42px;letter-spacing:.5px;font-weight:800}
+    .hero .sub{font-size:19px;color:#d9e8da;margin-top:10px;max-width:680px}
+    .thesis{margin-top:26px;font-size:21px;font-style:italic;color:#fff;border-left:4px solid var(--gold);padding-left:18px;max-width:720px}
+    .cta-row{margin-top:30px;display:flex;gap:14px;flex-wrap:wrap}
+    .btn{display:inline-block;background:var(--gold);color:#2a5230;font-weight:700;padding:13px 22px;border-radius:8px;font-size:15px}
+    .btn.alt{background:transparent;color:#fff;border:1.5px solid #a5c4a7}
+    section{padding:50px 0;border-bottom:1px solid var(--line)}
+    h2{font-size:27px;color:var(--brand-dark);font-weight:800;margin-bottom:6px}
+    .lead{color:var(--soft);font-size:16px;margin-bottom:26px;max-width:760px}
+    .router{width:100%;border-collapse:collapse;background:#fff;border:1px solid var(--line);border-radius:10px;overflow:hidden}
+    .router th,.router td{text-align:left;padding:13px 15px;border-bottom:1px solid var(--line);font-size:14.5px;vertical-align:top}
+    .router th{background:var(--brand-dark);color:#fff;font-weight:700}
+    .router tr:last-child td{border-bottom:none}
+    .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:18px}
+    .card{background:#fff;border:1px solid var(--line);border-radius:10px;padding:20px}
+    .card h3{font-size:17px;color:var(--brand-dark);margin-bottom:6px}
+    .card p{font-size:14px;color:var(--soft)}
+    .tierwrap{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px;margin-top:10px}
+    .tier{background:#fff;border:1px solid var(--line);border-radius:10px;padding:20px}
+    .tier .price{color:var(--gold);font-weight:800;font-size:15px;margin:4px 0 10px}
+    .tier ul{margin-left:18px;font-size:13.5px;color:var(--soft)}
+    .proof{background:#fff;border-left:4px solid var(--accent);padding:14px 18px;border-radius:6px;margin-bottom:12px;font-size:14.5px}
+    .proof b{color:var(--brand-dark)}
+    .quiz{background:#fff;border:1px solid var(--line);border-radius:10px;padding:24px;margin-top:10px}
+    .q{margin-bottom:16px}
+    .q p{font-weight:600;font-size:14.5px;color:var(--ink);margin-bottom:6px}
+    .q label{display:block;font-size:13.5px;color:var(--soft);padding:3px 0;cursor:pointer}
+    #score{margin-top:18px;padding:18px;border-radius:8px;background:var(--brand-dark);color:#fff;display:none}
+    #score b{color:var(--gold)}
+    .scoreBtn{background:var(--accent);color:#fff;border:none;padding:12px 22px;border-radius:8px;font-weight:700;font-size:15px;cursor:pointer}
+    footer{background:var(--brand-dark);color:#cfe0d0;font-size:13px;padding:34px 0;text-align:center}
+    footer b{color:#fff}
+    .badge{display:inline-block;background:#F1F4E4;color:#1e3d21;font-size:12px;font-weight:700;padding:4px 10px;border-radius:20px;margin-bottom:14px}
+    h1,h2,h3{font-family:'Bakbak One',sans-serif;}
+.langbar .lang-active{color:#BDE051;font-weight:800;}
+</style>
+    </head>
+    <body>
+<div class="langbar">Ler em: <a href="../../index.html">English</a> | <a href="../fr/index.html">Français</a> | <a href="../es/index.html">Español (LATAM)</a> | <b class="lang-active">Português do Brasil</b></div>
+    
+    <header class="hero"><div class="wrap">
+      <div class="badge">GOVERNANÇA DE IA CENTRADA NO SER HUMANO</div>
+      <h1>AI GOVERNANCE CHAIN™</h1>
+      <p class="sub">Instrumentos de governança, estruturas de referência e jornadas para organizações de qualquer tamanho, de uma equipe de três pessoas a um ministério nacional. Criados por um estrategista e arquiteto de IA com décadas de experiência profissional.</p>
+      <div class="thesis">A inteligência artificial não falha porque lhe falta inteligência. Ela falha porque concorda com você.</div>
+      <div class="cta-row">
+        <a class="btn" href="#start">Comece aqui (60 segundos)</a>
+        <a class="btn alt" href="#assessment">Faça a autoavaliação gratuita</a>
+      </div>
+    </div></header>
+<div style="background:#BDE051;text-align:center;padding:10px 16px;"><a href="free_library.html" style="color:#1e3d21;font-weight:700;text-decoration:none;font-family:Cairo,sans-serif;font-size:16px;">Explore a biblioteca gratuita, agora com uma camada técnica legível por máquina para engenheiros: cada instrumento gratuito, em PDF e DOCX, com um clique &rarr;</a></div>
+
+    
+    <section id="start"><div class="wrap">
+      <h2>Comece aqui</h2>
+      <p class="lead">Encontre sua situação, obtenha o instrumento gratuito certo e descubra o próximo passo. Cada instrumento é gratuito, completo e utilizável desde hoje.</p>
+      <table class="router">
+        <tr><th>Se você é...</th><th>Comece com este instrumento gratuito</th><th>Depois</th></tr>
+        <tr><td>Novo na governança de IA</td><td>O Kit inicial de governança de IA (guia do primeiro dia)</td><td>Siga o mapa da jornada</td></tr>
+        <tr><td>Inseguro sobre sua exposição</td><td>O Painel de maturidade da governança</td><td>Diagnóstico Governar antes de escalar</td></tr>
+        <tr><td>Diante de um regulador</td><td>O Cartão Regulação em um relance</td><td>Cartão de decisão dos níveis de risco do Regulamento europeu de IA</td></tr>
+        <tr><td>Preocupado com uma IA que concorda com facilidade demais</td><td>O Registro de riscos de bajulação da IA</td><td>A Bateria de testes de bajulação da IA</td></tr>
+        <tr><td>Membro do conselho ou executivo</td><td>O Resumo para o conselho</td><td>A Auditoria de governança pré-escala</td></tr>
+      <tr><td>Engenheiro ou arquiteto</td><td>Os esquemas legíveis por máquina e a Bateria de testes de bajulação executável</td><td><a href="free_library.html#for-engineers" style="color:var(--green);font-weight:700;">Abrir a camada técnica</a></td></tr>
+      </table>
+    </div></section>
+    
+    <section id="sycophancy"><div class="wrap">
+      <h2>O problema que ninguém mais governa: a bajulação da IA</h2>
+      <p class="lead">A maioria dos esforços de governança de IA verifica se um modelo é preciso, justo e seguro. Quase nenhum verifica se ele dirá a verdade quando a verdade incomodar. Um modelo que bajula, cede e fabrica concordância é uma falha de governança, e é a que este canal foi criado para resolver.</p>
+      <div class="grid">
+        <div class="card"><h3>Registro de riscos de bajulação da IA</h3><p>A taxonomia de oito padrões com sondas de detecção e registro para preencher. Gratuito e completo.</p></div>
+        <div class="card"><h3>Bateria de testes de bajulação da IA</h3><p>Dez comandos prontos para uso com uma escala de trinta pontos para revelar a bajulação, a capitulação e a concordância fabricada.</p></div>
+        <div class="card"><h3>Mapa de modos de falha da IA agêntica</h3><p>Oito modos de falha próprios dos sistemas autônomos, cada um com um sinal de alerta e uma salvaguarda de primeira linha.</p></div>
+      </div>
+    </div></section>
+    
+    <section id="proof"><div class="wrap">
+      <h2>Provas, não promessas</h2>
+      <p class="lead">Resultados de antes e depois, anonimizados, extraídos da biblioteca de casos. Cada um apresenta um padrão real de falha, o instrumento que o respondeu e o resultado.</p>
+      <div class="proof"><b>Micro / Privado: o modelo que concordava com tudo, a caminho de uma falha pública</b><br>Uma equipe de quatro pessoas estava a dias de lançar um assistente que bajulava os usuários em vez de informá-los. Uma única sessão de revisão com o Registro de riscos de bajulação gratuito revelou o padrão antes que um único cliente o visse. O lançamento ocorreu no prazo. O custo da prevenção foi quase nulo; o custo da falha evitada era a própria marca. <a href="cases/case_page_pt_01.html" style="color:var(--accent);font-weight:700">Ler o caso completo &rarr;</a></div>
+<div class="proof"><b>Médio / Privado: pronto para a certificação em semanas, não em meses</b><br>Uma empresa de 180 pessoas enfrentava uma preparação ISO/IEC 42001 planejada em trimestres. Partindo do kit inicial AIMS, as políticas, os controles e a estrutura de evidências que consomem a maior parte de um calendário de certificação ficaram prontos em semanas. A auditoria foi antecipada em um trimestre inteiro. <a href="cases/case_page_pt_03.html" style="color:var(--accent);font-weight:700">Ler o caso completo &rarr;</a></div>
+<div class="proof"><b>Grande organização / Público: governar o que se compra, em escala nacional</b><br>Uma instituição pública operava dezenas de sistemas de IA comprados que nunca construiu e não podia inspecionar. Um modelo operacional federado, um responsável por sistema, um registro, uma cadência de revisão, submeteu a IA comprada à mesma governança da IA construída, em cada unidade, sem interromper um único serviço. <a href="cases/case_page_pt_05.html" style="color:var(--accent);font-weight:700">Ler o caso completo &rarr;</a></div>
+<div class="proof"><b>Pequeno / Privado: a primeira hora que salvou o cliente principal</b><br>Quando a IA de uma pequena empresa produziu um erro grave diante do cliente, a equipe executou o runbook da primeira hora: conter, preservar, notificar. O incidente foi encerrado na mesma semana, a trilha de evidências satisfez os auditores do cliente, e a conta principal foi renovada. <a href="cases/case_page_pt_06.html" style="color:var(--accent);font-weight:700">Ler o caso completo &rarr;</a></div>
+<p style="font-size:13.5px;margin-top:10px;font-weight:700"><a href="https://github.com/aigovernancechain" style="color:var(--accent)">Ver o modelo completo de retorno sobre investimento e custo da inação &rarr;</a></p>
+    </div></section>
+    
+    <section id="assessment"><div class="wrap">
+      <h2>Autoavaliação interativa gratuita</h2>
+      <p class="lead">Responda dezesseis perguntas que cobrem os quatro eixos da governança. Nada do que você digita sai do seu navegador. Você recebe uma pontuação, um nível de maturidade e um próximo passo recomendado.</p>
+      <div class="quiz" id="quiz"></div>
+      <button class="scoreBtn" onclick="calcScore()">Ver minha pontuação</button>
+      <div id="score"></div>
+    </div></section>
+    
+    <section id="offer"><div class="wrap">
+      <h2>A escada de valor</h2>
+      <p class="lead">A regra que governa tudo: o QUÊ e o PORQUÊ são gratuitos. O COMO, o COM-VOCÊ e o FEITO-PARA-VOCÊ são pagos.</p>
+      <div class="tierwrap">
+        <div class="tier"><h3>Nível 0: Gratuito</h3><div class="price">0 USD</div><ul><li>24 instrumentos de governança completos</li><li>Estruturas, glossário, modelo de maturidade</li><li>Mapa da jornada e autoavaliação</li></ul><a style="display:inline-block;margin-top:10px;background:#BDE051;color:#1e3f21;font-weight:800;padding:8px 14px;border-radius:6px;text-decoration:none;font-size:.9rem;" href="free_library.html">Explorar a biblioteca gratuita &rarr;</a></div>
+        <div class="tier"><h3>Nível B: Kits de governança</h3><div class="price">990 a 1.900 USD</div><ul><li>AI Ethics Operating Kit</li><li>AI Risk Management Kit</li><li>AI Assurance and Audit Kit</li></ul><a style="display:inline-block;margin-top:10px;background:#BDE051;color:#1e3f21;font-weight:800;padding:8px 14px;border-radius:6px;text-decoration:none;font-size:.9rem;" href="storefront.html#core-kits">Ver os kits &rarr;</a></div>
+        <div class="tier"><h3>Nível C: Pacotes principais</h3><div class="price">3.900 a 4.900 USD</div><ul><li>AI-ERF™ Implementation Pack</li><li>EU AI Act Compliance Pack</li><li>ISO/IEC 42001 Certification Toolkit</li></ul><a style="display:inline-block;margin-top:10px;background:#BDE051;color:#1e3f21;font-weight:800;padding:8px 14px;border-radius:6px;text-decoration:none;font-size:.9rem;" href="storefront.html#flagship">Ver os pacotes principais &rarr;</a></div>
+        <div class="tier"><h3>Nível D: Com você</h3><div class="price">A partir de 99 USD por mês</div><ul><li>Governance Vault: 4.900 a 24.000 USD por ano</li><li>The Governance Circle: 99 a 299 USD por mês</li><li>Auditoria de governança pré-escala: 35.000 a 120.000 USD</li></ul><a style="display:inline-block;margin-top:10px;background:#BDE051;color:#1e3f21;font-weight:800;padding:8px 14px;border-radius:6px;text-decoration:none;font-size:.9rem;" href="storefront.html#recurring">Ver os programas &rarr;</a></div>
+      </div>
+    </div></section>
+<section style="background:#F1F4E4;padding:40px 6%;"><div class="wrap" style="max-width:900px;margin:0 auto;">
+  <h2 style="font-family:'Bakbak One',sans-serif;color:#1e3d21;margin-bottom:14px;">Mathieu K. Gouanou</h2>
+  <p style="color:#2a3a2c;line-height:1.65;margin-bottom:14px;">Décadas de experiência profissional como estrategista, analista de negócios e arquiteto de IA, com domínio comprovado de reengenharia de processos de negócio (BPR) e de transformação digital, desenvolvido ao longo de muitos programas e projetos estratégicos. Membro do Conselho Consultivo de Harvard Business Review. Autor do AI Governance Emergency Response Framework (AI-ERF)™, o primeiro padrão operacional de resposta a emergências para a governança de IA. Criador do AI Sycophancy Risk Register™, o instrumento que governa a falha que ninguém mais nomeia: uma inteligência artificial que concorda com você em vez de dizer a verdade. Arquiteto do AI Governance Health Score™, a medida repetível que mantém a governança viva depois que o projeto termina, e fundador do The Governance Circle, a associação onde os profissionais mantêm sua governança atualizada.</p>
+  <p style="color:#2a3a2c;line-height:1.65;">Criador do corpo de trabalho AI GOVERNANCE CHAIN™: mais de quarenta instrumentos de governança operacionais abrangendo sete pilares estratégicos (ética, risco, estratégia, asseguramento, cultura, direitos humanos e IA de fronteira), uma taxonomia de trinta riscos de IA nomeados, um modelo operacional sob medida para cada organização, de uma equipe de três pessoas a um ministério nacional, e a publicação trimestral State of AI Governance. Construído sobre as disciplinas que regem o mercado: o Regulamento europeu de inteligência artificial, a ISO/IEC 42001 e o NIST AI Risk Management Framework.</p>
+</div></section>
+    
+    <footer>
+  <div class="wrap">
+    <div class="social-links" style="margin:0 0 14px 0;">
+      <span style="font-family:'Bakbak One',sans-serif;color:#BDE051;font-size:0.95rem;letter-spacing:0.5px;">ACOMPANHE O TRABALHO</span><br>
+  <a href="https://www.linkedin.com/in/mathieugouanou/" style="color:#F1F4E4;text-decoration:underline;margin-right:14px;">LinkedIn</a>
+  <a href="https://x.com/mathieugouanou" style="color:#F1F4E4;text-decoration:underline;margin-right:14px;">X (Twitter)</a>
+  <a href="https://www.youtube.com/@mathieugouanou" style="color:#F1F4E4;text-decoration:underline;margin-right:14px;">YouTube</a>
+  <a href="https://github.com/aigovernancechain" style="color:#F1F4E4;text-decoration:underline;">GitHub</a>
+    </div>
+    <p style="color:#F1F4E4;"><b>AI GOVERNANCE CHAIN&#8482;</b> &nbsp;|&nbsp; &#169; 2026 Mathieu K. Gouanou. Todos os direitos reservados. &nbsp;|&nbsp; Membro do Conselho Consultivo de Harvard Business Review</p>
+    <p style="color:#BDE051;font-weight:bold;">Norma documental: uma governan&ccedil;a de IA centrada no ser humano.</p>
+  </div>
+</footer>
+    
+    <script>
+    var Q=[
+    ["Mantemos um inventário de cada sistema de IA que usamos ou desenvolvemos.","Cobertura"],
+    ["Classificamos cada sistema de IA por nível de risco.","Cobertura"],
+    ["Sabemos quais regulações se aplicam aos nossos sistemas de IA.","Cobertura"],
+    ["Uma pessoa é formalmente responsável pela governança de IA.","Controle"],
+    ["As decisões de IA de alto risco têm supervisão humana.","Controle"],
+    ["Testamos nossos modelos contra a bajulação e os modos de falha.","Controle"],
+    ["Avaliamos fornecedores externos de IA antes da adoção.","Controle"],
+    ["Documentamos o raciocínio por trás das decisões-chave de IA.","Documentação"],
+    ["Temos políticas de IA por escrito.","Documentação"],
+    ["Podemos apresentar evidências a um auditor ou regulador.","Documentação"],
+    ["Informamos os usuários quando eles interagem com uma IA.","Documentação"],
+    ["Monitoramos os sistemas de IA implantados segundo um cronograma.","Monitoramento"],
+    ["Temos um plano de incidentes para quando a IA falha.","Monitoramento"],
+    ["Revisamos a saúde da governança pelo menos a cada trimestre.","Monitoramento"],
+    ["Acompanhamos a maturidade da governança de IA ao longo do tempo.","Monitoramento"],
+    ["Podemos parar rapidamente um sistema de IA se necessário.","Controle"]
+    ];
+    var qd=document.getElementById('quiz');
+    Q.forEach(function(item,i){
+     var d=document.createElement('div');d.className='q';
+     d.innerHTML='<p>'+(i+1)+'. '+item[0]+'</p>'+
+     '<label><input type="radio" name="q'+i+'" value="0"> Não / ainda não</label>'+
+     '<label><input type="radio" name="q'+i+'" value="2"> Parcialmente</label>'+
+     '<label><input type="radio" name="q'+i+'" value="4"> Sim, plenamente</label>';
+     qd.appendChild(d);
+    });
+    function calcScore(){
+     var s=0,answered=0;
+     for(var i=0;i<Q.length;i++){var r=document.querySelector('input[name="q'+i+'"]:checked');if(r){s+=parseInt(r.value);answered++;}}
+     var band,rec;
+     if(s<=20){band="Exposto";rec="Comece com o Kit inicial de governança de IA e o Mapa da jornada.";}
+     else if(s<=38){band="Consciente";rec="Use o Painel de maturidade e a Estrutura de governança por etapas para construir a estrutura.";}
+     else if(s<=52){band="Gerenciado";rec="Adote o Sistema operacional da governança e uma cadência de revisão trimestral.";}
+     else{band="Maduro";rec="Busque a preparação para a certificação e considere a Auditoria pré-escala para uma garantia independente.";}
+     var el=document.getElementById('score');el.style.display='block';
+     el.innerHTML='<p>Sua pontuação: <b>'+s+' / 64</b> ('+answered+' de 16 respondidas)</p><p>Nível de maturidade: <b>'+band+'</b></p><p>Próximo passo recomendado: '+rec+'</p>';
+     el.scrollIntoView({behavior:'smooth'});
+    }
+    </script>
+    </body>
+    </html>
+    

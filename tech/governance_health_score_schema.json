@@ -1,0 +1,167 @@
+{
+  "meta": {
+    "name": "ai-governance-health-score",
+    "publisher": "AI GOVERNANCE CHAIN™",
+    "author": "Mathieu K. Gouanou",
+    "credential": "Member, Harvard Business Review Advisory Council",
+    "version": "1.0",
+    "status": "canonical",
+    "license": "CC BY-NC-ND 4.0. Attribution required. Non-commercial use only. No derivatives. Commercial licensing: contact@aigovernancechain.com",
+    "citation": "Mathieu K. Gouanou (2026). The AI Governance Health Score™. AI GOVERNANCE CHAIN™.",
+    "document_standard": "human-first AI governance",
+    "free_to_paid_bridge": {
+      "free": "This schema, the 16 questions, the scoring model, and the readiness bands: the WHAT and the WHY.",
+      "paid": "The AI Governance Operating System and The Governance Circle: the operating cadence, board reporting, and the quarterly review that keeps the score alive. See the AI GOVERNANCE CHAIN™ storefront."
+    }
+  },
+  "trademark_note": "AI Governance Health Score™ is a trademark of AI GOVERNANCE CHAIN™. The instrument may be run and embedded under the license terms; the name identifies this canonical instrument only.",
+  "description": "A re-runnable 64-point measure of AI governance health across four axes: Coverage, Control, Documentation, and Monitoring. Run it quarterly; the trend matters more than any single score.",
+  "answer_scale": [
+    {
+      "value": 0,
+      "label": "No / not yet"
+    },
+    {
+      "value": 2,
+      "label": "Partly"
+    },
+    {
+      "value": 4,
+      "label": "Yes, fully"
+    }
+  ],
+  "axes": [
+    {
+      "id": "Coverage",
+      "question_count": 3,
+      "max_points": 12,
+      "meaning": "You cannot govern what you cannot see: inventory, classification, applicable regulation."
+    },
+    {
+      "id": "Control",
+      "question_count": 5,
+      "max_points": 20,
+      "meaning": "Named accountability, human oversight, failure-mode testing, vendor vetting, and the ability to stop."
+    },
+    {
+      "id": "Documentation",
+      "question_count": 4,
+      "max_points": 16,
+      "meaning": "Governance that cannot be proven does not exist in an audit: decisions, policies, evidence, disclosure."
+    },
+    {
+      "id": "Monitoring",
+      "question_count": 4,
+      "max_points": 16,
+      "meaning": "Governance that is not maintained decays: scheduled monitoring, incident readiness, cadence, trend."
+    }
+  ],
+  "questions": [
+    {
+      "id": "HS01",
+      "axis": "Coverage",
+      "text": "We maintain an inventory of every AI system we use or build."
+    },
+    {
+      "id": "HS02",
+      "axis": "Coverage",
+      "text": "We have classified each AI system by risk level."
+    },
+    {
+      "id": "HS03",
+      "axis": "Coverage",
+      "text": "We know which regulations apply to our AI systems."
+    },
+    {
+      "id": "HS04",
+      "axis": "Control",
+      "text": "Someone is formally accountable for AI governance."
+    },
+    {
+      "id": "HS05",
+      "axis": "Control",
+      "text": "High-risk AI decisions have human oversight."
+    },
+    {
+      "id": "HS06",
+      "axis": "Control",
+      "text": "We test our models for sycophancy and failure modes."
+    },
+    {
+      "id": "HS07",
+      "axis": "Control",
+      "text": "We vet third-party AI vendors before adoption."
+    },
+    {
+      "id": "HS08",
+      "axis": "Control",
+      "text": "We can stop an AI system quickly if needed."
+    },
+    {
+      "id": "HS09",
+      "axis": "Documentation",
+      "text": "We document the reasoning behind key AI decisions."
+    },
+    {
+      "id": "HS10",
+      "axis": "Documentation",
+      "text": "We have written AI policies in place."
+    },
+    {
+      "id": "HS11",
+      "axis": "Documentation",
+      "text": "We can produce evidence for an auditor or regulator."
+    },
+    {
+      "id": "HS12",
+      "axis": "Documentation",
+      "text": "We disclose to users when they interact with AI."
+    },
+    {
+      "id": "HS13",
+      "axis": "Monitoring",
+      "text": "We monitor deployed AI systems on a schedule."
+    },
+    {
+      "id": "HS14",
+      "axis": "Monitoring",
+      "text": "We have an incident plan for when AI fails."
+    },
+    {
+      "id": "HS15",
+      "axis": "Monitoring",
+      "text": "We review governance health at least quarterly."
+    },
+    {
+      "id": "HS16",
+      "axis": "Monitoring",
+      "text": "We track AI governance maturity over time."
+    }
+  ],
+  "scoring": {
+    "method": "Sum the answer values across all 16 questions. Maximum 64. The weakest AXIS, not the total, tells you where to act first.",
+    "bands": [
+      {
+        "range": "0 to 20",
+        "band": "Exposed",
+        "recommendation": "Start with the AI Governance Starter Kit and the Journey Map."
+      },
+      {
+        "range": "21 to 38",
+        "band": "Aware",
+        "recommendation": "Use the Readiness Scorecard and the Stage-Gate Framework to build structure."
+      },
+      {
+        "range": "39 to 52",
+        "band": "Managed",
+        "recommendation": "Adopt the Governance Operating System and a quarterly review cadence."
+      },
+      {
+        "range": "53 to 64",
+        "band": "Mature",
+        "recommendation": "Pursue certification readiness and consider the Pre-Scale Governance Audit for independent assurance."
+      }
+    ],
+    "cadence": "Quarterly. Log each run with its date so the trend is auditable."
+  }
+}

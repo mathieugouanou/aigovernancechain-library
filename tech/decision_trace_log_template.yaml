@@ -1,0 +1,39 @@
+# =====================================================================
+# The Decision-Trace Log (canonical template)
+# AI GOVERNANCE CHAIN™ | (c) 2026 Mathieu K. Gouanou. All rights reserved.
+# Member, Harvard Business Review Advisory Council.
+# License: CC BY-NC-ND 4.0 | Commercial licensing: contact@aigovernancechain.com
+# Citation: Mathieu K. Gouanou (2026). The Decision-Trace Log. AI GOVERNANCE CHAIN™.
+# Document standard: human-first AI governance.
+# =====================================================================
+# WHAT: a structured, auditable record of every AI-influenced decision.
+# WHY: when a regulator, auditor, or board asks "why did the system decide
+#      that, and who agreed?", memory is not evidence. This log is.
+# HOW TO USE: copy this file into your governance repo. One entry per
+#      decision. Keep entries immutable; corrections are new entries.
+# FREE covers the WHAT and the WHY. The full workflow (automated capture,
+# register integration, retention rules) lives in the paid
+# AI Governance Operating System on the AI GOVERNANCE CHAIN™ storefront.
+
+log_owner: ""                # accountable person for this log
+system: ""                   # the AI system this log covers
+retention_policy: ""         # how long entries are kept, and why
+
+entries:
+  - id: DT-0001
+    timestamp: ""            # ISO 8601, e.g. 2026-07-13T09:30:00Z
+    decision: ""             # what was decided, in one sentence
+    ai_role: ""              # recommended | drafted | scored | automated
+    ai_output_summary: ""    # what the system actually produced
+    human_reviewer: ""       # who reviewed it (name and role)
+    human_action: ""         # accepted | modified | overridden | escalated
+    rationale: ""            # WHY the human acted as they did
+    evidence_refs: []        # links or file refs backing the decision
+    dissent_recorded: ""     # any disagreement voiced, by whom (empty = none voiced)
+    sycophancy_check: ""     # pass | fail | not_run  (Anti-Sycophancy Review Gate)
+    affected_parties: ""     # who this decision touches
+    reversible: true         # can this decision be undone
+    follow_up: ""            # scheduled review date, if any
+
+  # - id: DT-0002
+  #   (copy the block above; entries are append-only)
