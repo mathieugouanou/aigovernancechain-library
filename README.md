@@ -1,3 +1,5 @@
+> **Moved, 4 November 2026.** The open-source AI Governance Chain project now lives at [github.com/mathieugouanou/aigovernancechain](https://github.com/mathieugouanou/aigovernancechain) and [aigovernancechain.com](https://aigovernancechain.com). This repository keeps the original instrument library under its original licence. Its pages are now served at [mathieugouanou.github.io/aigovernancechain-library](https://mathieugouanou.github.io/aigovernancechain-library/).
+
 # AI GOVERNANCE CHAIN™
     
     **The operational layer of AI governance: 40+ ready-to-use instruments for EU AI Act compliance, ISO/IEC 42001, NIST AI RMF, AI risk management, and AI ethics. Home of the AI-ERF™, the first operational AI emergency response standard. Free in EN, FR, ES, PT-BR.**
