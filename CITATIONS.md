@@ -8,7 +8,7 @@
     
     ## The framework and channel
     
-    Mathieu K. Gouanou (2026). AI GOVERNANCE CHAIN™: A Human-First AI Governance Framework. https://github.com/[your-handle]/ai-governance-chain
+    Mathieu K. Gouanou (2026). AI GOVERNANCE CHAIN™: A Human-First AI Governance Framework. https://github.com/mathieugouanou/aigovernancechain-library
     
     ## Named instruments (cite individually where used)
     
@@ -32,5 +32,5 @@
 
 AI GOVERNANCE CHAIN™  |  AI Governance Framework
 (c) 2026 Mathieu K. Gouanou. All rights reserved.
-Member, Harvard Business Review Advisory Council.
+A member of the Harvard Business Review Advisory Council, an opt-in research community of business professionals.
 Document standard: human-first AI governance.
