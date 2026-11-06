@@ -10,5 +10,5 @@ Classification au titre du Règlement européen sur l'IA achevée en un après-m
 
 AI GOVERNANCE CHAIN™  |  Cadre de gouvernance de l'IA
 (c) 2026 Mathieu K. Gouanou. Tous droits réservés.
-Membre, Conseil consultatif de la Harvard Business Review.
+A member of the Harvard Business Review Advisory Council, an opt-in research community of business professionals.
 Standard du document : gouvernance de l'IA centrée sur l'humain.
