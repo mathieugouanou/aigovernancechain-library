@@ -10,5 +10,5 @@ Preparación para la norma ISO/IEC 42001 reducida de meses a semanas con el kit 
 
 AI GOVERNANCE CHAIN™  |  Marco de gobernanza de la IA
 (c) 2026 Mathieu K. Gouanou. Todos los derechos reservados.
-Miembro, Consejo Asesor de Harvard Business Review.
+A member of the Harvard Business Review Advisory Council, an opt-in research community of business professionals.
 Estándar del documento: gobernanza de la IA centrada en el ser humano.

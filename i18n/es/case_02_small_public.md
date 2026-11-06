@@ -10,5 +10,5 @@ Clasificación conforme al Reglamento de IA de la UE completada en una tarde, de
 
 AI GOVERNANCE CHAIN™  |  Marco de gobernanza de la IA
 (c) 2026 Mathieu K. Gouanou. Todos los derechos reservados.
-Miembro, Consejo Asesor de Harvard Business Review.
+A member of the Harvard Business Review Advisory Council, an opt-in research community of business professionals.
 Estándar del documento: gobernanza de la IA centrada en el ser humano.
