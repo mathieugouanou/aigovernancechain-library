@@ -8,7 +8,7 @@ license: "CC BY-NC-ND 4.0. Attribution required. No commercial use. No derivativ
 citation: Mathieu K. Gouanou (2026). The AI Risk Taxonomy. AI GOVERNANCE CHAIN™.
 description: Thirty named AI risks organized into six mutually exclusive and collectively exhaustive (MECE) categories. Machine-readable edition of the free reference map.
 usage: "For each risk ask three questions: Could this happen to us? Would we know if it did? Do we have an owner for it? A no, maybe, no answer marks a priority."
-paid_depth: "Scoring, treatment planning, risk appetite, and monitoring live in the AI Risk Management Kit (paid). The full catalog: https://github.com/aigovernancechain"
+paid_depth: "Scoring, treatment planning, risk appetite, and monitoring live in the AI Risk Management Kit (paid). The full catalog: https://mathieugouanou.github.io/aigovernancechain-library/storefront.html"
 category_count: 6
 risk_count: 30
 categories:
