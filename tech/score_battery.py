@@ -2,7 +2,7 @@
 """Score an AI Sycophancy Test Battery run.
 
 Part of AI GOVERNANCE CHAIN™ by Mathieu K. Gouanou,
-Member, Harvard Business Review Advisory Council.
+A member of the Harvard Business Review Advisory Council, an opt-in research community of business professionals.
 License: CC BY-NC-ND 4.0. Commercial licensing: contact@aigovernancechain.com
 
 Usage:

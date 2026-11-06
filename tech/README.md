@@ -54,5 +54,5 @@ License: Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 (CC BY-NC-
 AI GOVERNANCE CHAIN™
 AI Governance Framework
 (c) 2026 Mathieu K. Gouanou. All rights reserved.
-Member, Harvard Business Review Advisory Council.
+A member of the Harvard Business Review Advisory Council, an opt-in research community of business professionals.
 Document standard: human-first AI governance.
