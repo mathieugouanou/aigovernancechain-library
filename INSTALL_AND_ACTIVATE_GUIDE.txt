@@ -21,7 +21,7 @@ STEP 1. CREATE YOUR GITHUB ACCOUNT (skip if you have one)
 STEP 2. CREATE THE REPOSITORY (the home of your channel)
 1. When signed in, select the plus sign at the top right, then New repository.
 2. Repository name: aigovernancechain (lowercase, no spaces).
-3. Description (copy and paste exactly, 267 characters): AI governance framework: 40+ ready-to-use instruments for EU AI Act compliance, ISO/IEC 42001, NIST AI RMF, AI risk management, and AI ethics. Home of the AI-ERF™, the first operational AI emergency response standard. Free in EN, FR, ES, PT-BR. By Mathieu K. Gouanou.
+3. Description (copy and paste exactly, 267 characters): AI governance framework: 40+ ready-to-use instruments for EU AI Act compliance, ISO/IEC 42001, NIST AI RMF, AI risk management, and AI ethics. Home of the AI-ERF™, an operational AI emergency response framework. Free in EN, FR, ES, PT-BR. By Mathieu K. Gouanou.
 4. Select Public.
 5. Do NOT tick any of the initialize boxes (no README, no gitignore, no license).
    This package already contains all of them.

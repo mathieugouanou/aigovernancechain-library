@@ -2,7 +2,7 @@
 
 # AI GOVERNANCE CHAIN™
 
-**The operational layer of AI governance: 40+ ready-to-use instruments for EU AI Act compliance, ISO/IEC 42001, NIST AI RMF, AI risk management, and AI ethics. Home of the AI-ERF™, the first operational AI emergency response standard. Free in EN, FR, ES, PT-BR.**
+**The operational layer of AI governance: 40+ ready-to-use instruments for EU AI Act compliance, ISO/IEC 42001, NIST AI RMF, AI risk management, and AI ethics. Home of the AI-ERF™, an operational AI emergency response framework. Free in EN, FR, ES, PT-BR.**
 
 *By Mathieu K. Gouanou. A member of the Harvard Business Review Advisory Council, an opt-in research community of business professionals. Decades of professional experience in strategy, business architecture, and AI governance.*
 
@@ -26,11 +26,11 @@ You do not need to read this whole repository. Find your situation and follow th
 
 ---
 
-## The problem no one else is governing: AI sycophancy
+## The problem AI governance most often misses: AI sycophancy
 
 Most AI governance asks whether a model is accurate, fair, and safe. Almost none of it asks the question that matters most in practice: **does the system tell you the truth, or does it tell you what you want to hear?**
 
-A model that flatters, caves under pushback, or fabricates agreement is not a minor annoyance. It is a governance failure that corrupts every decision built on top of it. **AI GOVERNANCE CHAIN™ is the first framework to treat sycophancy as a first-class governance risk** with a named taxonomy, detection probes, and review gates.
+A model that flatters, caves under pushback, or fabricates agreement is not a minor annoyance. It is a governance failure that corrupts every decision built on top of it. **AI GOVERNANCE CHAIN™ treats sycophancy as a first-class governance risk** with a named taxonomy, detection probes, and review gates.
 
 Start with the free **[AI Sycophancy Test Battery](tech/sycophancy_test_battery.json)**: 8 patterns and 10 tests. The AI Sycophancy Risk Register™, the eight-pattern taxonomy, is free in [French](i18n/fr/registre-des-risques-de-sycophancie.md), [Spanish](i18n/es/registro-de-riesgos-de-adulacion.md) and [Brazilian Portuguese](i18n/pt-br/registro-de-riscos-de-bajulacao.md).
 
